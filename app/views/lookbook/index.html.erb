@@ -1,0 +1,12 @@
+<div class="form-page-wrap">
+
+	<div class="date">10.10.15
+		<div class="time">10 AM EST</div>
+		<%= form_for(:user, url: user_index_path, html: {:class => 'email_form'}) do |f| %>
+			<%= f.text_field :email, placeholder: "your email address", class: 'email_form_test' %>
+		<% end %>
+		<div class="notify"><%= session[:message] %></div>
+		<% session.delete(:message) %>
+	</div>
+
+</div>
