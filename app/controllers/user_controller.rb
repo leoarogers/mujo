@@ -14,8 +14,7 @@ class UserController < ApplicationController
 		else
 			session[:message] = "Invalid email address."
 		end
-		# redirect_to lookbook_index_path
-		redirect_to :back
+		redirect_to shop_index_path + '#bottom_half'
 	end
 
 end
