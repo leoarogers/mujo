@@ -66,8 +66,9 @@ a:hover {
 }
 
 .lookbook-page-wrap {
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #A8A6A7;
   background-position: center center;
   background-repeat: no-repeat;
@@ -84,6 +85,12 @@ a:hover {
   background-size: cover;
 }
 
+.social_icons {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
 .upper_right_icon {
   position: fixed;
   right: 15px;
@@ -97,7 +104,7 @@ a:hover {
 .menu {
   position: fixed;
   right: 55px;
-  top: 18px;
+  top: 16px;
 }
 
 .title {
@@ -119,7 +126,8 @@ a:hover {
   bottom: 0;
   left: 0;
   color: white;
-  margin: 10px;
+  margin: 15px;
+  opacity: 0.8;
 }
 
 .motto {
@@ -148,7 +156,7 @@ a:hover {
 span{
     font-family: "Courier New", Courier, monospace;
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .date {
@@ -209,19 +217,8 @@ span{
   font-size: 15px;
 }
 
-#wip {
-  position: absolute;
-  width: 510px;
-  height: 210px;
-  background: url('logos/TextLogoWhite.png');
-  background-size: cover;
-  opacity: 0.7;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  color: white;
+.social {
+  padding-left: 13px;
 }
 
 
