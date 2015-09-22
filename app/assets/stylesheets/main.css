@@ -221,4 +221,15 @@ span{
   padding-left: 13px;
 }
 
+.wip {
+  color: white;
+  text-align: center;
+  position: relative;
+  top:45%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 50px;
+}
+
 
