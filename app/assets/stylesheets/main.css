@@ -231,9 +231,3 @@ span{
   margin: auto;
   font-size: 50px;
 }
-
-@media all and (max-width: 1080px) and (min-width: 360px) {
-   span {
-      font-size: 30px;
-   }
-}
