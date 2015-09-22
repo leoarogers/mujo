@@ -232,10 +232,8 @@ span{
   font-size: 50px;
 }
 
-/*@media only screen and (max-width: 1080px) {
-
+@media all and (max-width: 1080px) and (min-width: 360px) {
    span {
       font-size: 30px;
    }
-
-}*/
+}
