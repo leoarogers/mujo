@@ -40,7 +40,6 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  /*background-color: #B1B1B1;*/
   background-image: url('background/Background2.jpg');
   background-size: cover;
   background-position: center center;
@@ -51,7 +50,6 @@ a:hover {
 .form-page-wrap {
   width: 100%;
   height: 100vh;
-  /*background-color: #B1B1B1;*/
   background-image: url('background/Background2.jpg');
   background-size: cover;
   background-position: center center;
@@ -73,7 +71,6 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  /*background-color: #B1B1B1;*/
   background-image: url('background/Background2.jpg');
   background-size: cover;
   background-position: center center;
