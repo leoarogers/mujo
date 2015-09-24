@@ -29,7 +29,7 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('background/Homepage.jpg');
+  background-image: url('background/Homepage1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,30 +40,25 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('background/Background2.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: #BABABA;
   z-index: -1
 }
 
 .form-page-wrap {
   width: 100%;
   height: 100vh;
-  background-image: url('background/Background2.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: #BABABA;
   z-index: -1
 }
 
 .shop-page-wrap {
   width: 100%;
   height: 100vh;
-  background-image: url('background/Shoppage.jpg');
+/*  background-image: url('background/Shoppage.jpg');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: #BABABA;
   z-index: -1
 }
 
@@ -71,10 +66,7 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('background/Background2.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: #BABABA;
   z-index: -1
 }
 
@@ -112,12 +104,12 @@ a:hover {
 
 .title {
   position: absolute;
-  width: 510px;
-  height: 210px;
+  width: 500px;
+  height: 200px;
   background: url('logos/TextLogoWhite.png');
   background-size: cover;
   opacity: 0.7;
-  top:0;
+  top:-60px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -130,7 +122,6 @@ a:hover {
   left: 0;
   color: white;
   margin: 15px;
-  opacity: 0.8;
 }
 
 .motto {
@@ -141,7 +132,18 @@ a:hover {
   height: 530px;
   background: url('logos/NothingIsPermanent.png');
   background-size: cover;
-  opacity: 0.70;
+  opacity: 0.8;
+}
+
+.collection {
+  position: absolute;
+  left: 50px;
+  bottom: 60px;
+  width: 500px;
+  height: 400px;
+  background: url('logos/ShoriCollection.png');
+  background-size: cover;
+  opacity: 0.8;
 }
 
 .down_arrow {
@@ -208,8 +210,8 @@ span{
 }
 
 .notify {
-  color: gold;
-  opacity: 0.6;
+  color: #A88C25;
+  opacity: 0.7;
   text-align: center;
   position: absolute;
   top: 250px;
