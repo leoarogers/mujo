@@ -242,10 +242,3 @@ span{
   margin: auto;
   font-size: 50px;
 }
-
-.top_border {
-  position: fixed;
-  height: 70px;
-  width: 100%;
-  background-color: black;
-}
