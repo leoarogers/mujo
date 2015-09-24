@@ -29,7 +29,7 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('background/Homepage1.jpg');
+  background-image: url('background/Homepage1.1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,10 +54,6 @@ a:hover {
 .shop-page-wrap {
   width: 100%;
   height: 100vh;
-/*  background-image: url('background/Shoppage.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
   background-color: #BABABA;
   z-index: -1
 }
@@ -67,6 +63,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background-color: #BABABA;
+  background-size: cover;
   z-index: -1
 }
 
