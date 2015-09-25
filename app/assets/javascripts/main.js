@@ -8,7 +8,7 @@ var scrollToAnchor = function( id ) {
 
 $(document).ready(function() {
 
-	$('.title').fadeIn(1500);
+	$('.title').fadeIn(2500);
 
 	$('.upper_right_icon').on('click', function(event){
 		$('.menu').fadeIn("slow");
