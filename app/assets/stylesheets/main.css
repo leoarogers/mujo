@@ -83,15 +83,25 @@ a:hover {
   overflow-x:hidden;
 }
 
-.big_pic {
+.row {
   position: absolute;
-  width: 940px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.big_pic {
+  position: fixed;
+  width: 80%;
   height: 660px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+  margin-top: 80px;
 }
 
 .upper_left_icon {
@@ -162,7 +172,7 @@ a:hover {
 .description {
   position: absolute;
   left: 34px;
-  bottom: 40px;
+  bottom: 30px;
   color: white;
   width: 330px;
   height: auto;
@@ -214,7 +224,7 @@ span{
   color: white;
   text-align: center;
   position: absolute;
-  top: 110px;
+  top: 120px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -226,7 +236,7 @@ span{
   color: white;
   text-align: center;
   position: absolute;
-  top: -35px;
+  top: -25px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -264,7 +274,7 @@ span{
   color: #A88C25;
   text-align: center;
   position: absolute;
-  top: 210px;
+  top: 220px;
   bottom: 0;
   left: 0;
   right: 0;
