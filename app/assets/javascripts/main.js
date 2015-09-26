@@ -39,4 +39,12 @@ $(document).ready(function() {
 		} 
 	});
 
+	if ($('.lookbook-page-wrap').length > 0) {
+		$('.top_bar').show();
+		$('.bottom_bar').show();
+	} else {
+		$('.top_bar').hide();
+		$('.bottom_bar').hide();
+	};
+
 })

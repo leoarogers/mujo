@@ -70,22 +70,29 @@ a:hover {
   height: 100%;
   background-color: black;
   z-index: -1;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+.top_bar {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+}
+
+.bottom_bar {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: black;
 }
 
 .container {
   position: absolute;
   top:80px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  overflow-y:scroll;
-  overflow-x:hidden;
-}
-
-.row {
-  position: absolute;
-  top:0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -128,6 +135,7 @@ a:hover {
   height: 25px;
   background: url('logos/MenuBox_v2.png');
   background-size: cover;
+  cursor: pointer;
 }
 
 .menu {
