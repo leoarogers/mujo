@@ -31,11 +31,13 @@ $(document).ready(function() {
 		if ($('.big_pic').has('img').length > 0) {
 			$('.big_pic').empty();
 			$('.big_pic').hide();
+			$('.lookbook_filter').hide();
 		} else if (target.classList.contains('thumbnail')) {
 			$('img').removeClass('active');
 			$("#" + target.id).addClass('active')
 			$('.active').clone().appendTo('.big_pic');
 			$('.big_pic').show();
+			$('.lookbook_filter').show();
 		} 
 	});
 
