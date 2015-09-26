@@ -25,4 +25,18 @@ $(document).ready(function() {
 	    scrollToAnchor(href);
 	  }
 	});
+
+	$('.lookbook-page-wrap').click(function(event) {
+		target = event.target;
+		if ($('.big_pic').has('img').length > 0) {
+			$('.big_pic').empty();
+			$('.big_pic').hide();
+		} else if (target.classList.contains('thumbnail')) {
+			$('img').removeClass('active');
+			$("#" + target.id).addClass('active')
+			$('.active').clone().appendTo('.big_pic');
+			$('.big_pic').show();
+		} 
+	});
+
 })
