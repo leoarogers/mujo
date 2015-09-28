@@ -490,7 +490,7 @@ ul li img {
   .motto {
     position: fixed;
     left: 40px;
-    bottom: 555px;
+    bottom: 525px;
     width: 910px;
     height: 920px;
     background: url('logos/NothingIsPermanent.png');
@@ -499,7 +499,7 @@ ul li img {
   .mujo_description {
     position: absolute;
     left: 75px;
-    bottom: 95px;
+    bottom: 75px;
     color: white;
     width: 790px;
     height: auto;
