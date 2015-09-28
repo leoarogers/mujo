@@ -187,11 +187,21 @@ a:hover {
 .motto {
   position: fixed;
   left: 20px;
-  bottom: 5px;
+  bottom: 130px;
   width: 420px;
   height: 430px;
   background: url('logos/NothingIsPermanent.png');
   background-size: cover;
+}
+
+.mujo_description {
+  position: absolute;
+  left: 34px;
+  bottom: 25px;
+  color: white;
+  width: 530px;
+  height: auto;
+  font-size: 15px;
 }
 
 .collection {
@@ -349,8 +359,8 @@ ul li img {
     position: fixed;
     left: 15px;
     top: 15px;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background: url('logos/DottedIconWhite.png');
     background-size: cover;
   }
@@ -398,33 +408,17 @@ ul li img {
   .description {
     position: absolute;
     left: 75px;
-    bottom: 80px;
+    bottom: 95px;
     color: white;
     width: 690px;
     height: auto;
     font-size: 35px;
   }
   .down_arrow {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: url('logos/Arrow.png');
-    background-size: cover;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    display: none;
   }
   .down_arrow_2 {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: url('logos/Arrow.png');
-    background-size: cover;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    margin: auto;
+    display: none;
   }
   .date {
     color: white;
@@ -496,11 +490,20 @@ ul li img {
   .motto {
     position: fixed;
     left: 40px;
-    bottom: 5px;
+    bottom: 555px;
     width: 910px;
     height: 920px;
     background: url('logos/NothingIsPermanent.png');
     background-size: cover;
+  }
+  .mujo_description {
+    position: absolute;
+    left: 75px;
+    bottom: 95px;
+    color: white;
+    width: 790px;
+    height: auto;
+    font-size: 35px;
   }
   .top_bar {
     position: fixed;
@@ -512,7 +515,7 @@ ul li img {
   .bottom_bar {
     position: fixed;
     bottom: 0;
-    height: 80px;
+    height: 75px;
     width: 100%;
     background-color: black;
   }
@@ -528,7 +531,7 @@ ul li img {
     z-index: 2;
   }
   .row {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .container {
     position: absolute;
