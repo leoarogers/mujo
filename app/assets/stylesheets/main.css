@@ -543,9 +543,6 @@ ul li img {
     margin: auto;
     z-index: 2;
   }
-  .row {
-    margin-bottom: 165px;
-  }
   .container {
     position: absolute;
     top: 100px;
