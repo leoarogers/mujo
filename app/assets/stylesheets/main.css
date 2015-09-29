@@ -544,11 +544,11 @@ ul li img {
     z-index: 2;
   }
   .row {
-    margin-bottom: 140px;
+    margin-bottom: 165px;
   }
   .container {
     position: absolute;
-    top: 160px;
+    top: 100px;
     bottom: 0;
     left: 0;
     right: 0;
