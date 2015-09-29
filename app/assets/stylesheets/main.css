@@ -398,16 +398,16 @@ ul li img {
   }
   .collection {
     position: absolute;
-    left: 10px;
-    bottom: 240px;
-    width: 840px;
-    height: 690px;
+    left: 15px;
+    bottom: 250px;
+    width: 740px;
+    height: 590px;
     background: url('logos/ShoriCollectionMarble.png');
     background-size: cover;
   }
   .description {
     position: absolute;
-    left: 75px;
+    left: 65px;
     bottom: 95px;
     color: white;
     width: 690px;
@@ -490,18 +490,18 @@ ul li img {
   .motto {
     position: fixed;
     left: 40px;
-    bottom: 525px;
-    width: 910px;
-    height: 920px;
+    bottom: 480px;
+    width: 810px;
+    height: 820px;
     background: url('logos/NothingIsPermanent.png');
     background-size: cover;
   }
   .mujo_description {
     position: absolute;
-    left: 75px;
+    left: 65px;
     bottom: 75px;
     color: white;
-    width: 790px;
+    width: 840px;
     height: auto;
     font-size: 35px;
   }
@@ -546,5 +546,6 @@ ul li img {
   .social_pic {
     width: 45px;
     height: 45px;
+    margin-left: 20px;
   }
 }
