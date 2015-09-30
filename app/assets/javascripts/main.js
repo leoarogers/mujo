@@ -49,11 +49,4 @@ $(document).ready(function() {
 		$('.bottom_bar').hide();
 	};
 
-	// $('#collection_btn').on('mouseover', function() {
-	// 	$('.submenu').show();
-	// });
-	// $('.complete_menu').on('mouseout', function() {
-	// 	$('.submenu').hide();
-	// })
-
 })

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :about
   resources :lookbook
   resources :user
+  resources :gallery
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
