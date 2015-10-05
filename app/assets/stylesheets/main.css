@@ -158,13 +158,23 @@ a:hover {
   }
 }
 
-.upper_left_icon {
+/*.upper_left_icon {
   position: fixed;
   left: 15px;
   top: 15px;
   width: 40px;
   height: 40px;
   background: url('logos/DottedIconWhite.png');
+  background-size: cover;
+}*/
+
+.upper_left_icon {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  width: 35px;
+  height: 60px;
+  background: url('logos/JPLogoWhite.png');
   background-size: cover;
 }
 
@@ -191,7 +201,14 @@ a:hover {
   top: 17px;
 }
 
-.title {
+.main_menu {
+  font-size: 10px;
+  position: absolute;
+  right: 170px;
+  top: 110px;
+}
+
+/*.title {
   position: absolute;
   width: 300px;
   height: 150px;
@@ -200,6 +217,19 @@ a:hover {
   top:0;
   bottom: 0;
   left: 0;
+  right: 0;
+  margin: auto;
+}*/
+
+.title {
+  position: absolute;
+  width: 230px;
+  height: 90px;
+  background: url('logos/TextLogoWhite.png');
+  background-size: cover;
+  top:-300px;
+  bottom: 0;
+  left: -600px;
   right: 0;
   margin: auto;
 }
@@ -353,13 +383,14 @@ span{
 }
 
 ul {
-    padding:0 0 0 0;
-    margin:0 0 0 0;
+  padding:0 0 0 0;
+  margin:0 0 0 0;
 }
 
 ul li {
-    list-style:none;
-    margin-bottom: 25px;
+  font-family: "Courier New", Courier, monospace;
+  list-style:none;
+  text-align: left;
 }
 
 li.sublist {
@@ -368,7 +399,7 @@ li.sublist {
 }
 
 ul li img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .thumbnail {
