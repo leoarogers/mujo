@@ -20,6 +20,10 @@ a {
   color: white;
 }
 
+a.black_a {
+  color: black;
+}
+
 a:hover {
   color: #A88C25;
   transition: 0.1s color;
@@ -30,7 +34,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: -1
+  z-index: -1;
 }
 
 .shop-page-wrap {
@@ -38,16 +42,18 @@ a:hover {
   width: 100%;
   height: 100vh;
   background-color: black;
+  z-index: 1;
 }
 
 .middle-page-wrap {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('background/Homepage1.2.jpg');
+  background-image: url('background/Shop1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1;
 }
 
 .form-page-wrap {
@@ -55,6 +61,7 @@ a:hover {
   width: 100%;
   height: 100vh;
   background-color: black;
+  z-index: 1;
 }
 
 .about-page-wrap {
@@ -63,16 +70,6 @@ a:hover {
   height: 100%;
   background-color: black;
   z-index: -1;
-}
-
-.lookbook-page-wrap {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: -1;
-  overflow-y:scroll;
-  overflow-x:hidden;
 }
 
 .gallery-page-wrap {
@@ -94,79 +91,36 @@ a:hover {
   margin: auto;
 }
 
-.top_bar {
+.gallery_pic {
   position: fixed;
+  height: 470px;
+  width: 350px;
+  background: url('lookbook/1.jpg') no-repeat center;
+  background-size: contain;
   top: 0;
-  height: 70px;
-  width: 100%;
-  background-color: black;
-}
-
-.bottom_bar {
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-  background-color: black;
-}
-
-.container {
-  position: absolute;
-  top:80px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
 
-.lookbook_filter {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.8;
-  z-index: 1;
-}
+.artist_name {
+  position: absolute;
+  right: -180px;
+  bottom: 30px;
+} 
 
-@media (min-width: 890px) {
-  .big_pic {
-    position: fixed;
-    width: 80%;
-    height: 660px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 80px;
-    z-index: 2;
-  }
+.art_purchase{
+  font-size: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: absolute;
+  right: -90px;
+  bottom: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
-
-@media (max-width: 890px) {
-  .big_pic {
-    position: fixed;
-    width: 100%;
-    height: 660px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 80px;
-    z-index: 2;
-  }
-}
-
-/*.upper_left_icon {
-  position: fixed;
-  left: 15px;
-  top: 15px;
-  width: 40px;
-  height: 40px;
-  background: url('logos/DottedIconWhite.png');
-  background-size: cover;
-}*/
 
 .upper_left_icon {
   position: fixed;
@@ -176,71 +130,68 @@ a:hover {
   height: 60px;
   background: url('logos/JPLogoWhite.png');
   background-size: cover;
+  z-index: 2;
+}
+
+.upper_left_icon_black {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  width: 35px;
+  height: 60px;
+  background: url('logos/JPLogoBlack.png');
+  background-size: cover;
 }
 
 .social_icons {
   position: fixed;
   right: 15px;
   bottom: 15px;
-}
-
-.upper_right_icon {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  width: 25px;
-  height: 25px;
-  background: url('logos/MenuBox_v2.png');
-  background-size: cover;
-  cursor: pointer;
+  z-index: 2;
 }
 
 .menu {
   position: fixed;
-  right: 55px;
+  right: 20px;
   top: 17px;
+  z-index: 2;
+}
+
+.title {
+  position: fixed;
+  width: 100px;
+  height: 40px;
+  background: url('logos/TextLogoWhite.png');
+  background-size: cover;
+  top: 40%;
+  left: 48%;
 }
 
 .main_menu {
-  font-size: 10px;
   position: absolute;
-  right: 170px;
-  top: 110px;
+  font-size: 11px;
+  top: 46px;
+  left: 5px;
+  z-index: 1;
 }
 
-/*.title {
+.stamp {
   position: absolute;
-  width: 300px;
-  height: 150px;
-  background: url('logos/TextLogoWhite.png');
+  width: 63px;
+  height: 104px;
+  background: url('logos/JPLogoWhite.png');
   background-size: cover;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}*/
-
-.title {
-  position: absolute;
-  width: 230px;
-  height: 90px;
-  background: url('logos/TextLogoWhite.png');
-  background-size: cover;
-  top:-300px;
-  bottom: 0;
-  left: -600px;
-  right: 0;
-  margin: auto;
+  left: -65px;
+  top: 2px;
 }
 
 .motto {
   position: fixed;
   left: 25px;
-  bottom: 110px;
+  bottom: 65px;
   width: 420px;
   height: 430px;
-  background: url('logos/NothingIsPermanent.png');
+  background: url('logos/NothingIsPermanentWhite.png');
   background-size: cover;
 }
 
@@ -257,7 +208,7 @@ a:hover {
 .collection {
   position: absolute;
   left: 10px;
-  bottom: 86px;
+  bottom: 95px;
   width: 340px;
   height: 290px;
   background: url('logos/ShoriCollectionMarble.png');
@@ -363,7 +314,7 @@ span{
   border-style: solid;
   border-width: 2px;
   border-color: white;
-  background-color: black
+  background-color: black;
 }
 
 .notify {

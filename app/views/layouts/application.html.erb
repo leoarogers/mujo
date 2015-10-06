@@ -11,28 +11,6 @@
 
 <%= yield %>
 
-<div class="top_bar" style="display: none"></div>
-<div class="bottom_bar" style="display: none"></div>
-
-<%= link_to root_path do %>
-<div class="upper_left_icon"></div>
-<% end %>
-
-
-<div class="menu" style="display: none">
-	<span><%= link_to 'SHOP', shop_index_path %></span>
-	<span><%= link_to 'ABOUT', about_index_path %></span>
-	<span><%= link_to 'LOOKBOOK', lookbook_index_path %></span>
-  <span><%= link_to 'GALLERY', gallery_index_path %></span>
-</div>
-
-<div class="upper_right_icon"></div>
-
-<div class="social_icons">
-	<a class="social" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('facebook-iso-white.png') %>" height="12" width="12"></a>
-    <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('instagram-iso-white.png') %>" height="12" width="12"></a>
-</div>
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

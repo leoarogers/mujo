@@ -26,27 +26,16 @@ $(document).ready(function() {
 	  }
 	});
 
-	$('.lookbook-page-wrap').click(function(event) {
-		target = event.target;
-		if ($('.big_pic').has('img').length > 0) {
-			$('.big_pic').empty();
-			$('.big_pic').hide();
-			$('.lookbook_filter').hide();
-		} else if (target.classList.contains('thumbnail')) {
-			$('img').removeClass('active');
-			$("#" + target.id).addClass('active')
-			$('.active').clone().appendTo('.big_pic');
-			$('.big_pic').show();
-			$('.lookbook_filter').show();
-		} 
-	});
+	var pic_number = 1;
 
-	if ($('.lookbook-page-wrap').length > 0) {
-		$('.top_bar').show();
-		$('.bottom_bar').show();
-	} else {
-		$('.top_bar').hide();
-		$('.bottom_bar').hide();
-	};
+	$('.gallery_pic').click(function() {
+		if (pic_number < 11) {
+			pic_number += 1;
+			$(this).css('background-image', 'url(images/lookbook/' + pic_number + '.jpg)');
+		} else {
+			pic_number = 1;
+			$(this).css('background-image', 'url(images/lookbook/' + pic_number + '.jpg)');
+		};
+	});
 
 })

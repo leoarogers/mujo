@@ -1,3 +1,19 @@
+<%= link_to root_path do %>
+<div class="upper_left_icon"></div>
+<% end %>
+
+<div class="menu">
+	<span><%= link_to 'SHOP', shop_index_path %></span>
+	<span><%= link_to 'ABOUT', about_index_path %></span>
+	<span><%= link_to 'LOOKBOOK', lookbook_index_path %></span>
+  	<span><%= link_to 'GALLERY', gallery_index_path %></span>
+</div>
+
+<div class="social_icons">
+	<a class="social" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconWhite.png') %>" height="15" width="15"></a>
+    <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconWhite.png') %>" height="15" width="15"></a>
+</div>
+
 <div class="shop-page-wrap">
 	
 	<div class="collection"></div>
