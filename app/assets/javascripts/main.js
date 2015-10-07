@@ -10,14 +10,6 @@ $(document).ready(function() {
 
 	$('.title').fadeIn(2500);
 
-	$('.upper_right_icon').on('click', function(event){
-		$('.menu').fadeIn("slow");
-	});
-
-	$('span').on('click', function(event) {
-		$('.menu').hide();
-	});
-
 	$("a").click(function( event ) {
 	  if ( $(this).attr("href").match("#") ) {
 	    event.preventDefault();
@@ -28,7 +20,8 @@ $(document).ready(function() {
 
 	var pic_number = 1;
 
-	$('.gallery_pic').click(function() {
+	$('.gallery_pic').click(function(e) {
+		if (e.target !== this) return;
 		if (pic_number < 11) {
 			pic_number += 1;
 			$(this).css('background-image', 'url(images/lookbook/' + pic_number + '.jpg)');

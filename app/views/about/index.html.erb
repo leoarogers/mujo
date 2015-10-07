@@ -1,27 +1,26 @@
 <%= link_to root_path do %>
-<div class="upper_left_icon"></div>
+<div class="upper_left_icon_black"></div>
 <% end %>
 
 <div class="menu">
-	<span><%= link_to 'SHOP', shop_index_path %></span>
-	<span><%= link_to 'ABOUT', about_index_path %></span>
-	<span><%= link_to 'LOOKBOOK', lookbook_index_path %></span>
-  	<span><%= link_to 'GALLERY', gallery_index_path %></span>
+	<span><%= link_to 'SHOP', shop_index_path, class: "black_a" %></span>
+	<span><%= link_to 'ABOUT', about_index_path, class: "black_a" %></span>
+	<span><%= link_to 'LOOKBOOK', lookbook_index_path, class: "black_a" %></span>
+  	<span><%= link_to 'GALLERY', gallery_index_path, class: "black_a" %></span>
 </div>
 
 <div class="social_icons">
-  <a class="social" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconWhite.png') %>" height="15" width="15"></a>
-    <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconWhite.png') %>" height="15" width="15"></a>
+  <a class="social" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconBlack.png') %>" height="15" width="15"></a>
+    <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconBlack.png') %>" height="15" width="15"></a>
 </div>
 
 <div class="about-page-wrap">
 
-  <div class="motto"></div>
+  <!-- <div class="motto"></div> -->
 
   <div class="mujo_description">
-  	Mujo (無常) is the philosophy that nothing is permanent. To us, it means the freedom to constantly change paths. In 2015, we left our jobs and moved to New York City. Guided by a need to create what we didn’t have, we produced a line of men’s accessories - simple pieces inspired by our roots and our new home.<br>
-
-  	Born and crafted in Brooklyn, NY, USA.
+    <div class="mujo_description_title"></div>
+  	無常 is the philosophy that nothing is permanent. To us, it means the freedom to constantly change paths. In 2015, we left our jobs and moved to New York City. Guided by a need to create what we didn’t have, we produced a line of men’s accessories - simple pieces inspired by our roots and our new home. Born and crafted in Brooklyn, NY, USA.
   </div>
 
 </div>
