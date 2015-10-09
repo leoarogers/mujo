@@ -7,7 +7,7 @@ class UserController < ApplicationController
 			user = User.find_by(email: params[:user][:email])
 			if !user
 				@user = User.create(email: params[:user][:email])
-				session[:message] = "Thanks. We will be in touch."
+				session[:message] = "Thanks. We'll be in touch."
 			else
 				session[:message] = "We already have you on record."
 			end

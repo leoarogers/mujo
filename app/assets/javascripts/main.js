@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	$('.gallery_pic').click(function(e) {
 		if (e.target !== this) return;
-		if (pic_number < 11) {
+		if (pic_number < 7) {
 			pic_number += 1;
 			$(this).css('background-image', 'url(images/lookbook/' + pic_number + '.jpg)');
 		} else {
