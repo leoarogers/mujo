@@ -24,10 +24,23 @@ $(document).ready(function() {
 		if (e.target !== this) return;
 		if (pic_number < 7) {
 			pic_number += 1;
-			$(this).css('background-image', 'url(images/lookbook/' + pic_number + '.jpg)');
+			$(this).css('background-image', 'url(images/gallery/' + pic_number + '.jpg)');
 		} else {
 			pic_number = 1;
-			$(this).css('background-image', 'url(images/lookbook/' + pic_number + '.jpg)');
+			$(this).css('background-image', 'url(images/gallery/' + pic_number + '.jpg)');
+		};
+	});
+
+	var lookbook_pic_number = 100;
+
+	$('.lookbook_pic').click(function(e) {
+		if (e.target !== this) return;
+		if (lookbook_pic_number < 104) {
+			lookbook_pic_number += 1;
+			$(this).css('background-image', 'url(images/lookbook/' + lookbook_pic_number + '.jpg)');
+		} else {
+			lookbook_pic_number = 100;
+			$(this).css('background-image', 'url(images/lookbook/' + lookbook_pic_number + '.jpg)');
 		};
 	});
 
