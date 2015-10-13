@@ -42,15 +42,10 @@ a:hover {
 }
 
 .main-page-wrap {
-/*  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: -1;*/
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-image: url('background/WelcomepageLight.jpg');
+  background-image: url('background/WelcomepageLowRes.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,7 +56,7 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: black;
   z-index: 1;
 }
 
@@ -80,11 +75,19 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: black;
   z-index: 1;
 }
 
 .about-page-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.contact-page-wrap {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -311,21 +314,21 @@ a:hover {
 
 .description_container {
   position: absolute;
-  width: 410px;
+  width: 375px;
   height: 100px;
-/*  border: 1px solid black;*/
-  top: 40%;
+  /*border: 1px solid white;*/
   left: 0;
   right: 0;
+  top: 40%;
   margin: auto;
 }
 
 .description_title {
   position: relative;
-  margin-top: 3px;
-  width: 93px;
-  height: 93px;
-  background: url('logos/DottedIconBlackNoBox.png') no-repeat center;
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
   background-size: contain;
   float: left;
 }
@@ -333,26 +336,28 @@ a:hover {
 .description {
   position: relative;
   color: black;
-  width: 310px;
+  width: 290px;
   height: 100px;
-  border-left: 1px solid black;
-  padding-left: 15px;
+  border-left: 1px solid white;
+  padding-left: 16px;
   font-size: 12px;
   float: right;
 }
 
 .isan_title {
-  font-family: 'din-medium';
+  font-family: 'din-light';
+  color: white;
   margin-left: 0;
-  margin-top: -2px;
-  margin-bottom: -2px;
-  font-size: 31px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 23px;
   font-weight: bold;
   display: block;
 }
 
 .isan_description {
   font-family: 'din-light';
+  color: white;
   margin-left: 0;
   display: block;
 }
@@ -361,21 +366,28 @@ a:hover {
   position: absolute;
   width: 25px;
   height: 25px;
-  background: url('logos/ArrowBlack.png');
+  background: url('logos/Arrow.png');
   background-size: cover;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.middle_click_area {
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  top: 33%;
 }
 
 .down_arrow_2 {
   position: absolute;
   width: 25px;
   height: 25px;
-  background: url('logos/ArrowBlack.png');
+  background: url('logos/Arrow.png');
   background-size: cover;
-  bottom: 0px;
+  bottom: 10px;
   left: 0;
   right: 0;
   margin: auto;
@@ -388,7 +400,7 @@ span{
 }
 
 .date {
-  color: Black;
+  color: white;
   text-align: center;
   position: relative;
   left: 0;
@@ -400,7 +412,7 @@ span{
 }
 
 .time {
-  color: Black;
+  color: white;
   text-align: center;
   position: absolute;
   top: 80px;
@@ -412,7 +424,7 @@ span{
 }
 
 .release {
-  color: Black;
+  color: white;
   text-align: center;
   position: absolute;
   top: -15px;
@@ -437,14 +449,14 @@ span{
   font-family: 'din-light';
   font-size: 9px;
   text-align: center;
-  background-color: Black;
+  background-color: white;
   padding: 5px 15px 5px 15px;
   border: none;
   outline: none;
   box-shadow: none;
-  color: Black;
-  border: 1px solid black;
-  background-color: white;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
 }
 
 .notify {
@@ -457,6 +469,46 @@ span{
   right: 0;
   margin: auto;
   font-size: 10px;
+}
+
+.contact_form_container {
+  position: absolute;
+  width: 270px;
+  height: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.contact_form_field {
+  font-size: 12px;
+  margin-top: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.contact_form_btn {
+  color: white;
+  background-color: black;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 12px;
+  padding: 3px 9px 3px 9px;
+  margin-top: 5px;
+}
+
+.contact_us {
+  position: absolute;
+  font-family: 'din-light';
+  font-size: 14px;
+  margin: 0px 0px 0px 0px;
+  bottom: 195px;
 }
 
 .social {

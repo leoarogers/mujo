@@ -84,5 +84,8 @@ $(document).ready(function() {
 		};
 	});
 
+	$('.contact_form_btn').click(function(e) {
+		e.preventDefault();
+	})
 
 })
