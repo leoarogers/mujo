@@ -1,6 +1,6 @@
-class CreateUsers < ActiveRecord::Migration
+class CreateContacts < ActiveRecord::Migration
   def change
-    create_table :users do |t|
+    create_table :contacts do |t|
     	t.string :email, null: false
     	
     	t.timestamps

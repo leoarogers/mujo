@@ -18,12 +18,12 @@
 
 <div class="contact_form_container">
 	<span class="contact_us">Contact Us</span>
-	<%= form_for(:user, url: user_index_path, html: {:class => 'contact_body_field'}) do |f| %>
-		<%= f.text_field :email, placeholder: "your email", class: 'contact_form_field' %>
-		<%= f.text_area :email, placeholder: "message", class: 'contact_form_field', size: "40x7" %>
+	<%= form_for(:message, url: contact_index_path, html: {:class => 'contact_body_field'}) do |f| %>
+		<%= f.text_field :contact_email, placeholder: "your email", class: 'contact_form_field' %>
+		<%= f.text_area :message_content, placeholder: "message", class: 'contact_form_field', size: "40x7" %>
 		<%= f.submit "send", class: 'contact_form_btn' %>
 	<% end %>
-	<div class="notify"><%= session[:message] %></div>
+	<div class="contact_notify"><%= session[:message] %></div>
 	<% session.delete(:message) %>
 </div>
 

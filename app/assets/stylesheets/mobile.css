@@ -39,8 +39,19 @@
     z-index: 2;
   }
 
+  .upper_left_icon {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    width: 100px;
+    height: 160px;
+    background: url('logos/JPLogoWhite.png');
+    background-size: cover;
+    z-index: 2;
+  }
+
   a {
-  	font-size: 40px;
+  	font-size: 35px;
   	padding-left: 20px;
   }
 
@@ -48,7 +59,7 @@
     position: absolute;
     width: 790px;
     height: 200px;
-    /*border: 1px solid black;*/
+    /*border: 1px solid white;*/
     top: 40%;
     left: 0;
     right: 0;
@@ -60,7 +71,7 @@
     margin-top: 10px;
     width: 185px;
     height: 185px;
-    background: url('logos/DottedIconBlackNoBox.png') no-repeat center;
+    background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
     background-size: contain;
     float: left;
   }
@@ -68,16 +79,16 @@
   .description {
     position: relative;
     color: black;
-    width: 590px;
+    width: 600px;
     height: 200px;
-    border-left: 1px solid black;
+    border-left: 1px solid white;
     padding-left: 25px;
     font-size: 12px;
     float: right;
   }
 
   .isan_title {
-    font-family: 'din-medium';
+    font-family: 'din-light';
     margin-left: 0;
     margin-top: -2px;
     margin-bottom: -2px;
@@ -97,7 +108,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    background: url('logos/ArrowBlack.png');
+    background: url('logos/Arrow.png');
     background-size: cover;
     bottom: 0;
     left: 0;
@@ -109,7 +120,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    background: url('logos/ArrowBlack.png');
+    background: url('logos/Arrow.png');
     background-size: cover;
     bottom: 0px;
     left: 0;
@@ -118,7 +129,7 @@
   }
 
   .date {
-    color: Black;
+    color: White;
     text-align: center;
     position: relative;
     left: 0;
@@ -130,7 +141,7 @@
   }
 
   .time {
-    color: Black;
+    color: White;
     text-align: center;
     position: absolute;
     top: 150px;
@@ -142,7 +153,7 @@
   }
 
   .release {
-    color: Black;
+    color: White;
     text-align: center;
     position: absolute;
     top: -30px;
@@ -167,14 +178,14 @@
     font-family: 'din-light';
     font-size: 20px;
     text-align: center;
-    background-color: Black;
+    background-color: White;
     padding: 5px 15px 5px 15px;
     border: none;
     outline: none;
     box-shadow: none;
-    color: Black;
-    border: 1px solid black;
-    background-color: white;
+    color: White;
+    border: 1px solid White;
+    background-color: Black;
   }
 
   .notify {
@@ -211,6 +222,112 @@
     left: 0px;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .lookbook_pic {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: url('lookbook/100.jpg') no-repeat center;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  .lb_left_arrow {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    /*background: url('logos/ArrowBlackLeft.png') no-repeat center;*/
+    background: none;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    left: -720px;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  .lb_right_arrow {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    /*background: url('logos/ArrowBlackRight.png') no-repeat center;*/
+    background: none;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    left: 705px;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;  
+  }
+
+  .contact_form_container {
+    position: absolute;
+    /*border: 1px solid black;*/
+    width: 590px;
+    height: 500px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+
+  .contact_form_field {
+    font-size: 30px;
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+  }
+
+  .contact_form_btn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 30px;
+    padding: 10px 19px 10px 19px;
+    margin-top: 25px;
+  }
+
+  .contact_us {
+    position: absolute;
+    font-family: 'din-light';
+    font-size: 40px;
+    margin: 0px 0px 0px 0px;
+    top: -45px;
+  }
+
+  .contact_notify {
+    color: #A88C25;
+    text-align: center;
+    position: absolute;
+    top: 490px;
+    bottom: 0;
+    left: 110px;
+    right: 0;
+    margin: auto;
+    font-size: 22px;
+  }
+
+  .social_pic {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
   }
 
 }
