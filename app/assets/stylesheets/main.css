@@ -45,7 +45,7 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-image: url('background/WelcomepageLowResDark.jpg');
+  background-image: url('background/WelcomepageLowResMed.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -473,11 +473,10 @@ span{
 
 .contact_notify {
   color: #A88C25;
-  text-align: center;
   position: absolute;
-  top: 195px;
+  top: 196px;
   bottom: 0;
-  left: 50px;
+  left: 60px;
   right: 0;
   margin: auto;
   font-size: 10px;
