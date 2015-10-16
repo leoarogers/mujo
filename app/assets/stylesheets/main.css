@@ -64,7 +64,7 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('background/Homepage3LowRes.jpg');
+  background-image: url('background/Homepage4LowRes.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,28 +224,6 @@ a:hover {
   cursor: hand;
 }
 
-.upper_left_icon {
-  position: fixed;
-  left: 15px;
-  top: 15px;
-  width: 35px;
-  height: 60px;
-  background: url('logos/JPLogoWhite.png');
-  background-size: cover;
-  z-index: 2;
-}
-
-.upper_left_icon_black {
-  position: fixed;
-  left: 15px;
-  top: 15px;
-  width: 35px;
-  height: 60px;
-  background: url('logos/JPLogoBlack.png');
-  background-size: cover;
-  z-index: 2;
-}
-
 .social_icons {
   position: fixed;
   right: 15px;
@@ -262,30 +240,22 @@ a:hover {
 
 .title {
   position: fixed;
-  width: 100px;
+  width: 109px;
   height: 40px;
-  background: url('logos/TextLogoWhite.png');
-  background-size: cover;
+  background: url('logos/TextLogoWB.png') no-repeat center;
+  background-size: contain;
+  left: 0;
+  right: 0;
   top: 40%;
-  left: 48%;
+  margin: auto;
 }
 
 .main_menu {
   position: absolute;
   font-size: 11px;
-  top: 46px;
+  top: 48px;
   left: 5px;
   z-index: 1;
-}
-
-.stamp {
-  position: absolute;
-  width: 63px;
-  height: 104px;
-  background: url('logos/JPLogoWhite.png');
-  background-size: cover;
-  left: -65px;
-  top: 2px;
 }
 
 .mujo_description {
@@ -304,10 +274,10 @@ a:hover {
   position: absolute;
   width: 90px;
   height: 30px;
-  background: url('logos/BlackBoxMujo.jpg') no-repeat center;
+  background: url('logos/TextBoxLogoBW.png') no-repeat center;
   background-size: contain;
   top: -37px;
-  left: -8px;
+  left: -9px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -315,7 +285,7 @@ a:hover {
 .description_container {
   position: absolute;
   width: 375px;
-  height: 100px;
+  height: 116px;
   /*border: 1px solid white;*/
   left: 0;
   right: 0;
@@ -325,9 +295,10 @@ a:hover {
 
 .description_title {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin-top: 10px;
+  width: 88px;
+  height: 88px;
+  margin-top: 16px;
+  margin-left: 1px;
   background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
   background-size: contain;
   float: left;
@@ -336,8 +307,8 @@ a:hover {
 .description {
   position: relative;
   color: black;
-  width: 290px;
-  height: 100px;
+  width: 280px;
+  height: 116px;
   border-left: 1px solid white;
   padding-left: 16px;
   font-size: 12px;
@@ -348,9 +319,9 @@ a:hover {
   font-family: 'din-light';
   color: white;
   margin-left: 0;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-bottom: 0px;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: bold;
   display: block;
 }
@@ -474,12 +445,12 @@ span{
 .contact_notify {
   color: #A88C25;
   position: absolute;
-  top: 196px;
+  top: 194px;
   bottom: 0;
   left: 60px;
   right: 0;
   margin: auto;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .contact_form_container {
@@ -535,6 +506,7 @@ ul li {
   font-family: "Courier New", Courier, monospace;
   list-style:none;
   text-align: left;
+  padding:0 0 3px 0;
 }
 
 li.sublist {

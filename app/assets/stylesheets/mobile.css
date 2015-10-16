@@ -6,57 +6,27 @@
     height: 100vh;
     background-color: black;
     z-index: 1;
-    margin-top: -50px;
+    margin-top: -100px;
   }
 
   .title {
     position: fixed;
-    width: 300px;
-    height: 130px;
-    background: url('logos/TextLogoWhite.png');
-    background-size: cover;
+    width: 209px;
+    height: 140px;
+    background: url('logos/TextLogoWB.png') no-repeat center;
+    background-size: contain;
+    left: 0;
+    right: 0;
     top: 40%;
-    left: 48%;
+    margin: auto;
   }
 
   .main_menu {
     position: absolute;
-    font-size: 40px;
-    top: 137px;
-    left: -1px;
+    font-size: 11px;
+    top: 145px;
+    left: -19px;
     z-index: 1;
-  }
-
-  .stamp {
-    position: absolute;
-    width: 220px;
-    height: 330px;
-    background: url('logos/JPLogoWhite.png');
-    background-size: cover;
-    left: -210px;
-    top: 17px;
-  }
-
-  .upper_left_icon_black {
-    position: fixed;
-    left: 15px;
-    top: 15px;
-    width: 100px;
-    height: 160px;
-    background: url('logos/JPLogoBlack.png');
-    background-size: cover;
-    z-index: 2;
-  }
-
-  .upper_left_icon {
-    position: fixed;
-    left: 15px;
-    top: 15px;
-    width: 100px;
-    height: 160px;
-    background: url('logos/JPLogoWhite.png');
-    background-size: cover;
-    z-index: 2;
   }
 
   a {
@@ -66,8 +36,8 @@
 
   .description_container {
     position: absolute;
-    width: 790px;
-    height: 200px;
+    width: 850px;
+    height: 290px;
     /*border: 1px solid white;*/
     top: 40%;
     left: 0;
@@ -77,9 +47,9 @@
 
   .description_title {
     position: relative;
-    margin-top: 10px;
-    width: 185px;
-    height: 185px;
+    margin-top: 30px;
+    width: 238px;
+    height: 238px;
     background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
     background-size: contain;
     float: left;
@@ -89,7 +59,7 @@
     position: relative;
     color: black;
     width: 600px;
-    height: 200px;
+    height: 290px;
     border-left: 1px solid white;
     padding-left: 25px;
     font-size: 12px;
@@ -119,7 +89,7 @@
     height: 60px;
     background: url('logos/Arrow.png');
     background-size: cover;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
     margin: auto;
@@ -176,7 +146,7 @@
   .email_form {
    text-align: center;
    position: absolute;
-   top: 100px;
+   top: 108px;
    bottom: 0;
    left: 0;
    right: 0;
@@ -201,7 +171,7 @@
     color: #A88C25;
     text-align: center;
     position: absolute;
-    top: 265px;
+    top: 275px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -225,7 +195,7 @@
     position: absolute;
     width: 150px;
     height: 100px;
-    background: url('logos/BlackBoxMujo.jpg') no-repeat center;
+    background: url('logos/TextBoxLogoBW.png') no-repeat center;
     background-size: contain;
     top: -100px;
     left: 0px;
@@ -324,12 +294,11 @@
   .contact_notify {
     color: #A88C25;
     position: absolute;
-    top: 490px;
-    bottom: 0;
+    top: 485px;
     left: 130px;
     right: 0;
     margin: auto;
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .social_pic {
