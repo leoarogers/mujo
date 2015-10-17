@@ -36,7 +36,7 @@
 
   .description_container {
     position: absolute;
-    width: 850px;
+    width: 865px;
     height: 290px;
     /*border: 1px solid white;*/
     top: 40%;
@@ -48,8 +48,8 @@
   .description_title {
     position: relative;
     margin-top: 30px;
-    width: 238px;
-    height: 238px;
+    width: 242px;
+    height: 242px;
     background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
     background-size: contain;
     float: left;
@@ -58,7 +58,7 @@
   .description {
     position: relative;
     color: black;
-    width: 600px;
+    width: 618px;
     height: 290px;
     border-left: 1px solid white;
     padding-left: 25px;
