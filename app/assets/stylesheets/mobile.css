@@ -36,7 +36,7 @@
 
   .description_container {
     position: absolute;
-    width: 865px;
+    width: 915px;
     height: 290px;
     /*border: 1px solid white;*/
     top: 40%;
@@ -58,7 +58,7 @@
   .description {
     position: relative;
     color: black;
-    width: 618px;
+    width: 668px;
     height: 290px;
     border-left: 1px solid white;
     padding-left: 25px;
@@ -279,7 +279,7 @@
     outline: none;
     box-shadow: none;
     font-size: 30px;
-    padding: 10px 19px 10px 19px;
+    padding: 5px 19px 5px 19px;
     margin-top: 25px;
   }
 

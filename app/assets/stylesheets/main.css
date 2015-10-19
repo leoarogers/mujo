@@ -284,7 +284,7 @@ a:hover {
 
 .description_container {
   position: absolute;
-  width: 365px;
+  width: 385px;
   height: 128px;
   /*border: 1px solid white;*/
   left: 0;
@@ -297,7 +297,7 @@ a:hover {
   position: relative;
   width: 100px;
   height: 100px;
-  margin-top: 16px;
+  margin-top: 15px;
   margin-left: 1px;
   background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
   background-size: contain;
@@ -307,10 +307,10 @@ a:hover {
 .description {
   position: relative;
   color: black;
-  width: 260px;
+  width: 280px;
   height: 128px;
   border-left: 1px solid white;
-  padding-left: 16px;
+  padding-left: 15px;
   font-size: 12px;
   float: right;
 }
@@ -482,7 +482,7 @@ span{
   outline: none;
   box-shadow: none;
   font-size: 12px;
-  padding: 3px 9px 3px 9px;
+  padding: 2px 9px 2px 9px;
   margin-top: 5px;
 }
 
