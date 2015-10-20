@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :user
   resources :gallery
   resources :contact
+  resources :adminuser
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

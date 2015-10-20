@@ -1,0 +1,17 @@
+<div>
+
+	<h4>Signed up</h4>
+	<% @users.each do |user| %>
+		<div><%= user.email %></div>
+	<% end %>
+
+	<h4>Contact</h4>
+	<% @contacts.each do |contact| %>
+		<div><%= contact.email %></div>
+		<% contact.messages.each do |message| %>
+			<div><%= message.content %></div>
+		<% end %>
+		<br>
+	<% end %>
+
+</div>
