@@ -10,6 +10,12 @@ $(document).ready(function() {
 
 	$('.title').fadeIn(2500);
 
+	$('.description_container').fadeIn(2500);
+
+	$('.mujo_description').fadeIn(2500);
+
+	$('.down_arrow').fadeIn(2500);
+
 	$("a").click(function( event ) {
 	  if ( $(this).attr("href").match("#") ) {
 	    event.preventDefault();
