@@ -141,7 +141,7 @@ a:hover {
   background-size: contain;
   top: 0;
   bottom: 0;
-  left: 705px;
+  left: 702px;
   right: 0;
   margin: auto;
   cursor: pointer;
@@ -446,7 +446,7 @@ span{
 .contact_notify {
   color: #A88C25;
   position: absolute;
-  top: 194px;
+  top: 195px;
   bottom: 0;
   left: 60px;
   right: 0;
@@ -482,7 +482,7 @@ span{
   outline: none;
   box-shadow: none;
   font-size: 12px;
-  padding: 2px 9px 2px 9px;
+  padding: 4px 9px 4px 9px;
   margin-top: 5px;
 }
 

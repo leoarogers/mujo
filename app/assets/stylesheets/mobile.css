@@ -279,7 +279,7 @@
     outline: none;
     box-shadow: none;
     font-size: 30px;
-    padding: 5px 19px 5px 19px;
+    padding: 9px 19px 9px 19px;
     margin-top: 25px;
   }
 
@@ -294,7 +294,7 @@
   .contact_notify {
     color: #A88C25;
     position: absolute;
-    top: 485px;
+    top: 483px;
     left: 130px;
     right: 0;
     margin: auto;
