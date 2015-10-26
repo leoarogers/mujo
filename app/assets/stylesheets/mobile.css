@@ -105,6 +105,15 @@
     margin: auto;
   }
 
+  .middle_description {
+    font-family: 'din-light';
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+  }
+
   .down_arrow_2 {
     position: absolute;
     width: 60px;
