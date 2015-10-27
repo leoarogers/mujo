@@ -37,7 +37,7 @@
   .description_container {
     position: absolute;
     width: 915px;
-    height: 325px;
+    height: 285px;
     /*border: 1px solid white;*/
     top: 40%;
     left: 0;
@@ -47,7 +47,7 @@
 
   .description_title {
     position: relative;
-    margin-top: 50px;
+    margin-top: 28px;
     width: 242px;
     height: 242px;
     background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
@@ -59,7 +59,7 @@
     position: relative;
     color: black;
     width: 668px;
-    height: 325px;
+    height: 285px;
     border-left: 2px solid white;
     padding-left: 25px;
     font-size: 12px;
@@ -69,19 +69,8 @@
   .isan_title {
     font-family: 'din-light';
     margin-left: 0;
-    margin-top: -2px;
-    font-size: 50px;
-    font-weight: bold;
-    display: block;
-  }
-
-  .isan_subtitle {
-    font-family: 'din-light';
-    color: white;
-    margin-left: 0;
-    margin-top: -14px;
-    margin-bottom: 5px;
-    font-size: 34px;
+    margin-top: 1px;
+    font-size: 40px;
     font-weight: bold;
     display: block;
   }

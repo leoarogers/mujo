@@ -1,7 +1,3 @@
-<%= link_to root_path do %>
-<div class="upper_left_icon_black"></div>
-<% end %>
-
 <div class="menu">
 	<span><%= link_to 'SHOP', shop_index_path, class: "black_a" %></span>
 	<span><%= link_to 'ABOUT', about_index_path, class: "black_a" %></span>
@@ -25,6 +21,12 @@
 	<% end %>
 	<div class="contact_notify"><%= session[:message] %></div>
 	<% session.delete(:message) %>
+</div>
+
+<div class="extra">
+	<span class="extra_text"><%= link_to 'Terms', policy_index_path, class: "black_a" %></span>
+	<span class="extra_text">|</span>
+	<span class="extra_text"><%= link_to 'Shipping', shipping_index_path, class: "black_a" %></span>
 </div>
 
 </div>
