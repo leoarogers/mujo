@@ -551,14 +551,20 @@ span.extra_text {
 }
 
 .terms {
-  position: relative;
+  position: absolute;
   width: 600px;
-  height: 100vh;
-  top: 50px;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
   left: 0;
   right: 0;
   margin: auto;
   font-size: 12px;
+}
+
+.terms_page_wrap {
+  position: relative;
+  padding-bottom: 30px;
 }
 
 .back_to_contact {
