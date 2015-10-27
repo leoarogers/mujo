@@ -315,4 +315,56 @@
     margin-left: 10px;
   }
 
+  .extra {
+    position: fixed;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  .terms {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 30px;
+  }
+
+  .terms_page_wrap {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  .back_to_contact {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: black;
+    font-size: 12px;
+  }
+
+  .back_to_contact:hover {
+    color: #A88C25;
+    transition: 0.1s color;
+    text-decoration: underline;
+  }
+
+  .black_a {
+    font-size: 37px;
+  }
+
+  .extra_text {
+    font-size: 25px;
+  }
+
+  span.extra_text {
+    font-size: 25px;
+  }
+
 }
