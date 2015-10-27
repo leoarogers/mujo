@@ -284,7 +284,7 @@ a:hover {
 
 .description_container {
   position: absolute;
-  width: 445px;
+  width: 455px;
   height: 111px;
   /*border: 1px solid white;*/
   left: 0;
@@ -307,7 +307,7 @@ a:hover {
 .description {
   position: relative;
   color: black;
-  width: 344px;
+  width: 354px;
   height: 111px;
   border-left: 1px solid white;
   padding-left: 15px;
@@ -319,7 +319,7 @@ a:hover {
   font-family: 'din-light';
   color: white;
   margin-left: 0;
-  margin-top: 4px;
+  margin-top: 5px;
   margin-bottom: -3px;
   font-size: 19px;
   font-weight: bold;
