@@ -233,6 +233,7 @@ a:hover {
 
 .menu {
   position: fixed;
+  font-size: 12px;
   right: 20px;
   top: 17px;
   z-index: 2;
@@ -358,8 +359,8 @@ a:hover {
   color: white;
   font-size: 12px;
   position: absolute;
-  left: 25px;
-  bottom: 25px;
+  left: 30px;
+  bottom: 30px;
 }
 
 .down_arrow_2 {
@@ -377,7 +378,6 @@ a:hover {
 span{
   font-family: "Courier New", Courier, monospace;
   margin-left: 10px;
-  font-size: 12px;
 }
 
 .date {
@@ -465,7 +465,7 @@ span{
 
 .contact_form_container {
   position: absolute;
-  width: 270px;
+  width: 257px;
   height: 200px;
   left: 0;
   right: 0;
@@ -544,9 +544,6 @@ ul li img {
   right: 0;
   margin: auto;
   text-align: center;
-}
-
-span.extra_text {
   font-size: 10px;
 }
 

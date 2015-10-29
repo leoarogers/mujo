@@ -21,6 +21,14 @@
     margin: auto;
   }
 
+  .menu {
+    position: fixed;
+    font-size: 37px;
+    right: 20px;
+    top: 17px;
+    z-index: 2;
+  }
+
   .main_menu {
     position: absolute;
     font-size: 11px;
@@ -30,7 +38,6 @@
   }
 
   a {
-  	font-size: 37px;
   	padding-left: 20px;
   }
 
@@ -356,15 +363,7 @@
     text-decoration: underline;
   }
 
-  .black_a {
-    font-size: 37px;
-  }
-
-  .extra_text {
-    font-size: 25px;
-  }
-
-  span.extra_text {
+  .extra {
     font-size: 25px;
   }
 
