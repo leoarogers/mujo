@@ -44,7 +44,7 @@
   .description_container {
     position: absolute;
     width: 915px;
-    height: 285px;
+    height: 330px;
     /*border: 1px solid white;*/
     top: 40%;
     left: 0;
@@ -54,7 +54,7 @@
 
   .description_title {
     position: relative;
-    margin-top: 28px;
+    margin-top: 48px;
     width: 242px;
     height: 242px;
     background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
@@ -66,7 +66,7 @@
     position: relative;
     color: black;
     width: 668px;
-    height: 285px;
+    height: 330px;
     border-left: 2px solid white;
     padding-left: 25px;
     font-size: 12px;
@@ -85,7 +85,16 @@
   .isan_description {
     font-family: 'din-light';
     margin-left: 0;
-    margin-top: 7px; 
+    margin-top: 10px; 
+    display: block;
+    font-size: 30px;
+  }
+
+  .isan_price {
+    font-family: 'din-light';
+    color: white;
+    margin-left: 0;
+    margin-top: 10px;
     display: block;
     font-size: 30px;
   }
@@ -100,15 +109,6 @@
     left: 0;
     right: 0;
     margin: auto;
-  }
-
-  .middle_description {
-    font-family: 'din-light';
-    color: white;
-    font-size: 32px;
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
   }
 
   .down_arrow_2 {
