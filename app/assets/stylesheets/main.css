@@ -64,11 +64,6 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('background/Homepage4LowRes.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
 }
 
 .form-page-wrap {
@@ -107,7 +102,20 @@ a:hover {
   position: fixed;
   width: 700px;
   height: auto;
-  background: url('lookbook/100.jpg') no-repeat center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.lb_active {
+  position: fixed;
+  width: 700px;
+  height: auto;
+  background: no-repeat center;
   background-size: contain;
   top: 0;
   bottom: 0;
@@ -356,9 +364,12 @@ a:hover {
 
 .middle_click_area {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 33%;
   top: 33%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .down_arrow_2 {
@@ -574,4 +585,40 @@ ul li img {
   color: #A88C25;
   transition: 0.1s color;
   text-decoration: underline;
+}
+
+/*TEST.........................................*/
+
+.navigation {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+  list-style: none;
+  z-index: 1;
+  padding-left: 0px;
+}
+
+.navigation li {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background: #52525a;
+  /*border-radius: 50%;*/
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navigation .active {
+  background: #eceff1;
+}
+
+div.active {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }

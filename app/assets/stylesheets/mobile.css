@@ -54,9 +54,9 @@
 
   .description_title {
     position: relative;
-    margin-top: 48px;
-    width: 242px;
-    height: 242px;
+    margin-top: 65px;
+    width: 220px;
+    height: 220px;
     background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
     background-size: contain;
     float: left;
@@ -65,7 +65,7 @@
   .description {
     position: relative;
     color: black;
-    width: 668px;
+    width: 688px;
     height: 330px;
     border-left: 2px solid white;
     padding-left: 25px;
@@ -96,7 +96,7 @@
     margin-left: 0;
     margin-top: 10px;
     display: block;
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .down_arrow {
@@ -223,7 +223,20 @@
     position: fixed;
     width: 100%;
     height: auto;
-    background: url('lookbook/100.jpg') no-repeat center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  .lb_active {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: no-repeat center;
     background-size: contain;
     top: 0;
     bottom: 0;
@@ -365,6 +378,10 @@
 
   .extra {
     font-size: 25px;
+  }
+
+  .navigation {
+    display: none;
   }
 
 }
