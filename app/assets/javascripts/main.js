@@ -24,6 +24,22 @@ $(document).ready(function() {
 	  }
 	});
 
+	$('.middle_right_area').hover(function() {
+		$('.right_arrow').fadeIn(200);
+	});
+
+	$('.middle_right_area').mouseout(function() {
+		$('.right_arrow').fadeOut(200);
+	});
+
+	$('.middle_left_area').hover(function() {
+		$('.left_arrow').fadeIn(200);
+	});
+
+	$('.middle_left_area').mouseout(function() {
+		$('.left_arrow').fadeOut(200);
+	});
+
 	//gallery scroll
 
 	var pic_number = 1;
@@ -113,5 +129,31 @@ $(document).ready(function() {
 		$('div.active').removeClass('active');
 		$('div.' + clicked).addClass('active');
 	})
+
+	var shop_pic_number = 1;
+
+	$('.middle_right_area').click(function(e) {
+		if (shop_pic_number < 4) {
+			shop_pic_number += 1;
+			$('div.active').removeClass('active');
+			$('div.shop_' + shop_pic_number).addClass('active');
+		} else {
+			shop_pic_number = 1;
+			$('div.active').removeClass('active');
+			$('div.shop_' + shop_pic_number).addClass('active');
+		};
+	});
+
+	$('.middle_left_area').click(function(e) {
+		if (shop_pic_number > 1) {
+			shop_pic_number -= 1;
+			$('div.active').removeClass('active');
+			$('div.shop_' + shop_pic_number).addClass('active');
+		} else {
+			shop_pic_number = 4;
+			$('div.active').removeClass('active');
+			$('div.shop_' + shop_pic_number).addClass('active');
+		};
+	});
 
 })

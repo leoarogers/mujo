@@ -123,6 +123,22 @@
     margin: auto;
   }
 
+  .middle_left_area {
+    display: none;
+  }
+
+  .middle_right_area {
+    display: none;
+  }
+
+  .left_arrow {
+    display: none;
+  }
+
+  .right_arrow {
+    display: none;
+  }
+
   .date {
     color: White;
     text-align: center;
