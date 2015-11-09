@@ -8,6 +8,19 @@ var scrollToAnchor = function( id ) {
 
 $(document).ready(function() {
 
+	// Stripe checkout form
+	$('#payment-form').submit(function(event) {
+	    var $form = $(this);
+
+	    // Disable the submit button to prevent repeated clicks
+	    $form.find('button').prop('disabled', true);
+
+	    Stripe.card.createToken($form, stripeResponseHandler);
+
+	    // Prevent the form from submitting with the default action
+	    return false;
+	  });
+
 	$('.title').fadeIn(2500);
 
 	$('.description_container').fadeIn(2500);
@@ -137,10 +150,14 @@ $(document).ready(function() {
 			shop_pic_number += 1;
 			$('div.active').removeClass('active');
 			$('div.shop_' + shop_pic_number).addClass('active');
+			$('li.active').removeClass('active');
+			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		} else {
 			shop_pic_number = 1;
 			$('div.active').removeClass('active');
 			$('div.shop_' + shop_pic_number).addClass('active');
+			$('li.active').removeClass('active');
+			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
 	});
 
@@ -149,10 +166,14 @@ $(document).ready(function() {
 			shop_pic_number -= 1;
 			$('div.active').removeClass('active');
 			$('div.shop_' + shop_pic_number).addClass('active');
+			$('li.active').removeClass('active');
+			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		} else {
 			shop_pic_number = 4;
 			$('div.active').removeClass('active');
 			$('div.shop_' + shop_pic_number).addClass('active');
+			$('li.active').removeClass('active');
+			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
 	});
 

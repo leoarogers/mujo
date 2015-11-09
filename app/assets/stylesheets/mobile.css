@@ -9,6 +9,13 @@
     margin-top: -100px;
   }
 
+  .middle-page-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top: -100px;
+  }
+
   .title {
     position: fixed;
     width: 249px;
