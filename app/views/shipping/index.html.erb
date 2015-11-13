@@ -1,5 +1,5 @@
 <div class="terms_page_wrap">
-	<%= link_to contact_index_path do %>
+	<%= link_to request.env["HTTP_REFERER"] do %>
 		<span class="back_to_contact black_a">BACK</span>
 	<% end %>
 

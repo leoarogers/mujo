@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'valid_email'
 # configure application to serve static assets
 gem 'rails_12factor', group: :production
+gem 'stripe'
+gem 'shippo'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

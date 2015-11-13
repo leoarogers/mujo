@@ -1,0 +1,37 @@
+<%= link_to root_path do %>
+	<div class="cart_home_icon"></div>
+<% end %>
+
+<div class="cart_container">
+	<div class="cart_edit_view">Edit/View Cart</div>
+	<div class="cart_item_count"><%= @total_items %> item(s) in your cart</div>
+
+	<div class="cart_items">
+		<ul>
+		<% @items.each do |item| %>
+			<li>
+				<div class="cart_item_info">
+					<span class="item_color_size">The Isan Beaded Bracelet <%= item['color'] %>/<%= item['size'] %></span>
+					<span class="item_amount">Qty: <%= item['amount'] %></span>
+					<%= link_to cart_path(@items.index(item)), class: 'remove_underline' do %>
+						<span class="item_remove">Remove</span>
+					<% end %>
+					<span class="item_price">$<%= 50 * item['amount'].to_i %></span>
+				</div>
+			</li>
+		<% end %>
+		<ul>
+	</div>
+
+	<div class="cart_subtotal">Subtotal: $<%= @price %></div>
+	<div class="cart_forward_btns">
+		<ul>
+			<%= link_to shipment_index_path do %>
+				<li>Checkout Now</li>
+			<% end %>
+			<%= link_to shop_index_path do %>
+				<li>Keep Shopping</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

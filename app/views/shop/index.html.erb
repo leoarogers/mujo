@@ -9,29 +9,19 @@
   	<span><%= link_to 'CONTACT', contact_index_path %></span>
 </div>
 
-<div class="social_icons">
-	<a class="social" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconWhite.png') %>" height="13" width="13"></a>
-    <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconWhite.png') %>" height="13" width="13"></a>
-</div>
-
 <div class="shop-page-wrap">
-
-	<a href="#middle_half" class="scroll">
 		<div class="description_container" style="display: none">
 			<div class="description_title"></div>
 			<div class="description">
 				<span class="isan_title">The Isan Beaded Bracelet Collection</span>
 				<span class="isan_description">Inspired by family tradition. Designed for our approach to life. 6mm semi-precious gemstones and a single 14K gold filled bead - a reminder to embrace the breaks, gaps, and disruptions in life's path. Handcrafted in Brooklyn, NY, USA.<span>
-				<span class="isan_price">Available in Matte Black Onyx and White Howlite, $50.</span>
 			</div>
+			<a href="#middle_half"><div class="shop_now">Shop Now</div></a>
 		</div>
-	</a>
-	
-	<a href="#middle_half" class="scroll"><div class="down_arrow" style="display: none"></div></a>
-
 </div>
 
 <div id="middle_half" class="middle-page-wrap">
+
 	<!-- Left and right arrows -->
 	<a href="#"><div class="right_arrow" style="display: none"></div></a>
 	<a href="#"><div class="left_arrow" style="display: none"></div></a>
@@ -53,20 +43,81 @@
 	<!-- <a href="#bottom_half" class="scroll"><div class="middle_click_area"></div></a> -->
 	<a href="#move_right"><div class="middle_right_area"></div></a>
 	<a href="#move_left"><div class="middle_left_area"></div></a>
-	<a href="#bottom_half" class="scroll"><div class="down_arrow_2"></div></a>
 
-</div>
+	<div class="shop_bar">
 
-<div id="bottom_half" class="form-page-wrap">
-
-	<div class="date">11.13.15
-		<div class="release">Coming Soon</div>
-		<div class="time">10 AM EST</div>
-		<%= form_for(:user, url: user_index_path, html: {:class => 'email_form'}) do |f| %>
-			<%= f.text_field :email, placeholder: "your email address", class: 'email_form_test' %>
+		<%= form_for(:cart, url: cart_index_path) do |f| %>
+			<div class="options">
+				<ul>
+					<li>
+						<select name="color" class="dropdown_btn dp_color">
+							<option value="">Color</option>
+							<option value="White">White</option>
+							<option value="Black">Black</option>
+						</select>
+					</li>
+					<li>
+						<select name="size" class="dropdown_btn dp_size">
+							<option value="">Size</option>
+							<option value='S - 6.5"'>S - 6.5"</option>
+							<option value='M - 7.0"'>M - 7.0"</option>
+							<option value='L - 7.5"'>L - 7.5"</option>
+						</select>
+					</li>
+					<li>
+						<select name="amount" class="dropdown_btn dp_qty">
+							<option value="">Qty</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option  value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+			<% if session[:error] %>
+				<span class="cart_error"><%= session[:error] %></span>
+				<% session.delete(:error) %>
+			<% end %>
+			<%= f.submit "Add To Cart", {class: "add_to_cart"} %>
 		<% end %>
-		<div class="notify"><%= session[:message] %></div>
-		<% session.delete(:message) %>
+
+		<div class="options_extra">
+			<ul>
+				<li class="product_specs"><a href="#">Product Specs</a></li>
+				<li class="size_chart"><a href="#">Size Chart</a></li>
+				<li class="shipping_returns"><%= link_to 'Shipping & Returns', shipping_index_path %></li>
+			</ul>
+		</div>
+
+		<div class="product_specs_pop" style="display: none">
+			<span class="product_specs_x">x</span>
+			<ul>
+				<li>- Handcrafted in Brooklyn, NY, USA</li>
+				<li>- 6mm White Howlite/Matte Black Onyx stones</li>
+				<li>- 6mm 14K gold filled bead</li>
+				<li>- Packaged in our signature black box with a tissue paper insert </li>
+				<li>- Individually hand stamped with a wax seal</li>
+			</ul>
+		</div>
+
+		<div class="size_chart_pop" style="display: none">
+			<span class="size_chart_x">x</span>
+			<ul>
+				<li>Small (6.5”) - Fits smaller men’s/average women’s wrists</li>
+				<li>Medium (7”) - Fits the average man</li>
+				<li>Large (7.5”) - Fits larger men’s wrists</li>
+			</ul>
+		</div>
+
+		<span class="total" value="50">$50</span>
+
+		<%= link_to cart_index_path, class: 'remove_underline' do %>
+			<div class="checkout_tag">Checkout</div>
+		<% end %>
+			<div class="checkout_count"><%= @amount %></div>
+		
 	</div>
 
 </div>
