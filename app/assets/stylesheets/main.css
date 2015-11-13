@@ -640,6 +640,15 @@ div.active {
   left: 10px;
 }
 
+.placeholder_icon {
+  position: fixed;
+  width: 90px;
+  height: 30px;
+  background: white;
+  top: 20px;
+  right: 10px;
+}
+
 .cart_container {
   position: fixed;
   width: 800px;
