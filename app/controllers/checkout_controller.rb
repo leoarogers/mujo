@@ -49,7 +49,8 @@ class CheckoutController < ApplicationController
 		    :metadata => {
 		    	email: session[:address_to]['email'],
 		    	name: session[:address_to]['name'],
-		    	phone: session[:address_to]['phone']
+		    	phone: session[:address_to]['phone'],
+		    	items: session[:item]
 		    }
 		  )
 		rescue Stripe::CardError => e

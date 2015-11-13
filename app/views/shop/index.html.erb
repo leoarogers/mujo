@@ -74,6 +74,11 @@
 							<option value="5">5</option>
 						</select>
 					</li>
+					<li>
+						<li class="options_extra product_specs"><a href="#">Product Specs</a></li>
+						<li class="options_extra size_chart"><a href="#">Size Chart</a></li>
+						<li class="options_extra shipping_returns"><%= link_to 'Shipping & Returns', shipping_index_path %></li>
+					</li>
 				</ul>
 			</div>
 			<% if session[:error] %>
@@ -83,13 +88,13 @@
 			<%= f.submit "Add To Cart", {class: "add_to_cart"} %>
 		<% end %>
 
-		<div class="options_extra">
+<!-- 		<div class="options_extra">
 			<ul>
 				<li class="product_specs"><a href="#">Product Specs</a></li>
 				<li class="size_chart"><a href="#">Size Chart</a></li>
 				<li class="shipping_returns"><%= link_to 'Shipping & Returns', shipping_index_path %></li>
 			</ul>
-		</div>
+		</div> -->
 
 		<div class="product_specs_pop" style="display: none">
 			<span class="product_specs_x">x</span>

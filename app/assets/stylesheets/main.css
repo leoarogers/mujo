@@ -273,9 +273,8 @@ select {
 }
 
 .options_extra {
-  position: absolute;
-  bottom: 17px;
-  left: 247px;
+  font-family: din-light;
+  font-size: 11px;
 }
 
 .total {
