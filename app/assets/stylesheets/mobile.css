@@ -1,0 +1,13 @@
+@media only screen and (max-device-width: 414px) and (orientation: portrait) { 
+
+	.shipment_forward_btns {
+	  position: absolute;
+	  width: 799px;
+	  height: auto;
+	  font-family: din-light;
+	  padding: 8px 1px 8px 10px;
+	  border-top: none;
+	  bottom: -120px;
+	}
+
+}
