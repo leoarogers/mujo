@@ -21,7 +21,7 @@ class ShipmentController < ApplicationController
 		  :name => 'Mujo NYC',
 		  :street1 => 'Broadway',
 		  :street_no => '230',
-		  :street2 => '',
+		  :street2 => '#2A',
 		  :city => 'Brooklyn',
 		  :state => 'NY',
 		  :zip => '11211',
