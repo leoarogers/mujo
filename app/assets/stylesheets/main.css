@@ -640,15 +640,6 @@ div.active {
   left: 10px;
 }
 
-.placeholder_icon {
-  position: fixed;
-  width: 90px;
-  height: 30px;
-  background: white;
-  top: 20px;
-  right: 10px;
-}
-
 .cart_container {
   position: fixed;
   width: 800px;
@@ -1011,5 +1002,8 @@ div.active {
 .loading {
   background-color: white;
   color: black;
-  border: 2px solid black;
+}
+
+body {
+     min-width: 800px;
 }

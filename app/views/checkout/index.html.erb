@@ -6,7 +6,8 @@
 
 <script type="text/javascript">
   // This identifies your website in the createToken call below
-  Stripe.setPublishableKey('pk_live_ITbKAUMC7tG4HfeY3gY5lv85');
+  // Stripe.setPublishableKey('pk_live_ITbKAUMC7tG4HfeY3gY5lv85');
+  Stripe.setPublishableKey('pk_test_qIQOZUyxbefJLS3XG7fXMnXa');
 
   var stripeResponseHandler = function(status, response) {
     var $form = $('#payment-form');
@@ -41,8 +42,6 @@
 <%= link_to root_path do %>
   <div class="cart_home_icon"></div>
 <% end %>
-
-<div class="placeholder_icon"></div>
 
 <div class="checkout_container">
   <div class="pay_ship_info">Payment/Shipping Information</div>

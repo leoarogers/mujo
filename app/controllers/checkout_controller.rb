@@ -6,7 +6,7 @@ class CheckoutController < ApplicationController
 			counter = 0
 			session[:item].each{|x| counter += x['amount'].to_i}
 			@price = counter * 50
-			if session[:address_to]['state'] == "ny" || session[:address_to]['state'] == "NY"
+			if session[:address_to]['state'] == "ny" || session[:address_to]['state'] == "NY" || session[:address_to]['state'] == "Ny" || session[:address_to]['state'] == "nY"
 				@tax = ((@price + 5)*0.08875).round(2)
 			else
 				@tax = 0
@@ -26,28 +26,30 @@ class CheckoutController < ApplicationController
 		# STRIPE PAYMENT
 
 		# Set your secret key: remember to change this to your live secret key in production
-		Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
+		# Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
+		Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
 
 		# Get the credit card details submitted by the form
 		token = params[:stripeToken]
 
 		# Get order total amount from params (in cents)
-		amount = params[:order_total].to_i * 100
+		amount = (params[:order_total].to_f * 100).to_i
 
 		# Create the charge on Stripe's servers (this will charge the user's card!!!)
 		number_of_units = 0
 		session[:item].each{|x| number_of_units += x['amount'].to_i}
+
 		begin
 		  charge = Stripe::Charge.create(
 		    :amount => amount, # amount in cents, again
 		    :currency => "usd",
 		    :source => token,
 		    :description => "The Isan Beaded Bracelet: #{number_of_units}",
-		    :receipt_email => session[:address_to][:email],
+		    :receipt_email => session[:address_to]['email'],
 		    :metadata => {
-		    	email: session[:address_to][:email],
-		    	name: session[:address_to][:name],
-		    	phone: session[:address_to][:phone]
+		    	email: session[:address_to]['email'],
+		    	name: session[:address_to]['name'],
+		    	phone: session[:address_to]['phone']
 		    }
 		  )
 		rescue Stripe::CardError => e
