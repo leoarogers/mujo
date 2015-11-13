@@ -27,7 +27,7 @@ class ShipmentController < ApplicationController
 		  :zip => '11211',
 		  :country => 'US',
 		  :phone => '+1 650 521 2541',
-		  :email => 'leo.a.rogers@gmail.com'}
+		  :email => 'info@mujonyc.com'}
 
 		# Create address_to object
 		address_to = {
@@ -43,7 +43,6 @@ class ShipmentController < ApplicationController
 		  :email => params['shipping_email']
 		}
 
-		puts address_to
 		if address_to[:name] == "" || address_to[:street1] == "" || address_to[:city] == "" || address_to[:state] == "" || address_to[:zip] == "" || address_to[:country] == "" || address_to[:email] == ""
 			session[:shipment_error] = "Please fill in required blank fields"
 			# redirect_to :back

@@ -35,12 +35,14 @@ class CheckoutController < ApplicationController
 		amount = params[:order_total].to_i * 100
 
 		# Create the charge on Stripe's servers (this will charge the user's card!!!)
+		number_of_units = 0
+		session[:item].each{|x| number_of_units += x['amount'].to_i}
 		begin
 		  charge = Stripe::Charge.create(
 		    :amount => amount, # amount in cents, again
 		    :currency => "usd",
 		    :source => token,
-		    :description => "Isan Beaded Bracelets",
+		    :description => "The Isan Beaded Bracelet: #{number_of_units}",
 		    :receipt_email => session[:address_to][:email],
 		    :metadata => {
 		    	email: session[:address_to][:email],
