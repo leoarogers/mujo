@@ -757,7 +757,7 @@ div.active {
 /*------------------------------------------*/
 
 .checkout_container {
-  position: fixed;
+  position: absolute;
   width: 800px;
   height: 450px;
   border: 1px solid black;
@@ -856,7 +856,7 @@ div.active {
 /*------------------------------------------*/
 
 .shipment_container {
-  position: fixed;
+  position: absolute;
   width: 800px;
   height: 450px;
   border: 1px solid black;
@@ -945,7 +945,7 @@ div.active {
 /*------------------------------------------*/
 
 .confirmation_container {
-  position: fixed;
+  position: absolute;
   width: 800px;
   height: 450px;
   border: 1px solid black;

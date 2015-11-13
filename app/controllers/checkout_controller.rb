@@ -26,8 +26,8 @@ class CheckoutController < ApplicationController
 		# STRIPE PAYMENT
 
 		# Set your secret key: remember to change this to your live secret key in production
-		# Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
-		Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
+		Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
+		# Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
 
 		# Get the credit card details submitted by the form
 		token = params[:stripeToken]
