@@ -39,6 +39,26 @@ class CheckoutController < ApplicationController
 		number_of_units = 0
 		session[:item].each{|x| number_of_units += x['amount'].to_i}
 
+		shopping_cart = session[:item]
+		all_items = Hash.new(0)
+		shopping_cart.each do |item|
+			puts item['color']
+			puts item['size']
+			if item['color'] == "White" && item['size'].split.first == "S"
+				all_items[:white_small] += item['amount'].to_i
+			elsif item['color'] == "White" && item['size'].split.first == "M"
+				all_items[:white_medium] += item['amount'].to_i
+			elsif item['color'] == "White" && item['size'].split.first == "L"
+				all_items[:white_large] += item['amount'].to_i
+			elsif item['color'] == "Black" && item['size'].split.first == "S"
+				all_items[:black_small] += item['amount'].to_i
+			elsif item['color'] == "Black" && item['size'].split.first == "M"
+				all_items[:black_medium] += item['amount'].to_i
+			elsif item['color'] == "Black" && item['size'].split.first == "L"
+				all_items[:black_large] += item['amount'].to_i
+			end
+		end
+
 		begin
 		  charge = Stripe::Charge.create(
 		    :amount => amount, # amount in cents, again
@@ -50,7 +70,12 @@ class CheckoutController < ApplicationController
 		    	email: session[:address_to]['email'],
 		    	name: session[:address_to]['name'],
 		    	phone: session[:address_to]['phone'],
-		    	items: session[:item]
+		    	white_small: all_items[:white_small],
+		    	white_medium: all_items[:white_medium],
+		    	white_large: all_items[:white_large],
+		    	black_small: all_items[:black_small],
+		    	black_medium: all_items[:black_medium],
+		    	black_large: all_items[:black_large]
 		    }
 		  )
 		rescue Stripe::CardError => e
