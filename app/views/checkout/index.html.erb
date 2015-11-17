@@ -56,6 +56,7 @@
       <div class="card_number">
         <label>
           <span class="card_span card_cat_title">Card Number</span>
+          <div class="accepted_cards_icon"></div>
           <input class="input_field" type="text" size="20" data-stripe="number"/>
         </label>
       </div>
@@ -69,6 +70,7 @@
       <div class="card_cvc">
         <label>
           <span class="card_span card_cat_title">CVC</span>
+          <span class="card_span cvv_icon"></span>
           <input class="input_field" type="text" size="4" data-stripe="cvc"/>
         </label>
       </div>
@@ -97,6 +99,7 @@
         </label>
       </div>
       <div class="card_forward_btns">
+        <!-- <div class="stripe_icon"></div> -->
         <ul>
           <li>
             <input type="hidden" name="order_total" value="<%= @order_total %>"/>
@@ -105,11 +108,24 @@
           <li>
             <span class="payment-errors"></span>
           </li>
-          <li>
-            <div class="stripe_icon"></div>
-          </li>
         </ul>
       </div>
+      <div class="stripe_icon"></div>
     </form>
   </div>
 </div>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('track', 'AddPaymentInfo');
+fbq('init', '766408273502804');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=766408273502804&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->

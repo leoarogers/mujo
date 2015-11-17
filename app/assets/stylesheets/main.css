@@ -321,7 +321,7 @@ select {
   bottom: 80px;
   left: 10px;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.8;
   padding: 15px 10px 10px 10px;
   width: 260px;
 }
@@ -348,7 +348,7 @@ select {
   bottom: 80px;
   left: 10px;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.8;
   padding: 15px 10px 10px 10px;
   width: 310px;
 }
@@ -729,16 +729,6 @@ div.active {
   padding: 2px 8px 2px 8px;
 }
 
-.stripe_icon {
-  position: absolute;
-  width: 93px;
-  height: 23px;
-  background: url('logos/stripe_powered.png') no-repeat center;
-  background-size: contain;
-  top: 16px;
-  right: 150px; 
-}
-
 .cart_subtotal {
    position: absolute;
    width: 150px;
@@ -767,20 +757,31 @@ div.active {
   margin: auto;
 }
 
+#payment-form {
+  position: relative;
+  width: 799px;
+  height: 378px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; 
+}
+
 .pay_ship_info {
-   position: absolute;
-   width: 100%;
-   height: auto;
-   background-color: black;
-   font-family: din-light;
-   color: white;
-   padding: 8px 1px 8px 10px;
-   font-size: 14px; 
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  font-family: din-light;
+  color: white;
+  padding: 8px 1px 8px 10px;
+  font-size: 14px; 
 }
 
 .payment_method {
   position: absolute;
-  top: 45px;
+  top: 43px;
 }
 
 .payment_method ul li {
@@ -803,52 +804,80 @@ div.active {
   padding: 2px 3px 2px 3px;
 }
 
+.cvv_icon {
+  position: absolute;
+  width: 40px;
+  height: 24px;
+  background: url('logos/cvv.png') no-repeat center;
+  background-size: contain;
+  left: 155px;
+}
+
 .card_cat_title {
   border: 1px solid black;
   background-color: #EBEBEB;
   float: left;
   width: 100px;
-  margin-right: 20px;
+  margin-bottom: 5px;
 }
 
 .input_field {
   border: 1px solid black;
   outline: none;
+  font-size: 12px;
   padding: 2px 3px 2px 3px;
   margin-left: 10px;
 }
 
 .card_forward_btns {
   position: absolute;
-  width: 799px;
+  width: 100%;
   height: auto;
   border-top: 1px solid black;
   font-family: din-light;
   padding: 8px 1px 8px 10px;
-  bottom: -180px;
+  bottom: 0;
 }
 
 .submit_payment_btn {
-  margin-top: 8px;
-  margin-left: 655px;
-  font-size: 12px;
+  display: inline;
+  float: right;
   font-family: din-light;
-  border: none;
-  -webkit-appearance: none;
-  padding: 3px 15px 3px 15px;
+  font-size: 12px;
+  background-color: black;
   color: white;
-  background-color: black; 
+  margin-right: 15px;
+  padding: 2px 8px 2px 8px;
+  border: none;
+}
+
+.stripe_icon {
+  position: absolute;
+  width: 93px;
+  height: 23px;
+  background: url('logos/stripe_powered.png') no-repeat center;
+  background-size: contain;
+  left: 10px;
+  bottom: 50px;
+}
+
+.accepted_cards_icon {
+  position: absolute;
+  width: 135px;
+  height: 23px;
+  background: url('logos/accepted_cards.jpg') no-repeat center;
+  background-size: contain;
+  left: 263px;
 }
 
 .card_pulled_val {
   font-family: din-light;
-  padding: 0px 0px 0px 0px;
+  font-size: 12px;
 }
 
 .payment-errors {
   position: absolute;
   font-family: din-light;
-  bottom: 15px;
 }
 
 /*Shipment*/
@@ -880,6 +909,7 @@ div.active {
 .billing_title {
   padding-left: 10px;
   padding-bottom: 10px;
+  font-size: 12px;
 }
 
 .billing_form {
@@ -890,7 +920,7 @@ div.active {
 .shipping_form {
   position: absolute;
   top: 45px;
-  left: 400px;
+  right: 10px;
 }
 
 #shipment_checkbox {
@@ -906,25 +936,24 @@ div.active {
 
 .shipment_forward_btns {
   position: absolute;
-  width: 799px;
+  width: 100%;
   height: auto;
   border-top: 1px solid black;
   font-family: din-light;
   padding: 8px 1px 8px 10px;
-  bottom: -125px; 
-  right: -63px;
+  bottom: 0;
 }
 
 .shipment_btn {
-  margin-top: 5px;
-  margin-left: 695px;
-  font-size: 12px;
+  display: inline;
+  float: right;
   font-family: din-light;
-  border: none;
-  -webkit-appearance: none;
-  padding: 3px 15px 3px 15px;
+  font-size: 12px;
+  background-color: black;
   color: white;
-  background-color: black; 
+  margin-right: 15px;
+  padding: 2px 8px 2px 8px;
+  border: none;
 }
 
 .address_2_hide {
@@ -937,7 +966,6 @@ div.active {
   position: absolute;
   font-family: din-light;
   font-size: 11px;
-  bottom: 18px;
 }
 
 /*Confirmation*/
@@ -980,15 +1008,16 @@ div.active {
 
 .confirmation_forward_btns {
   position: absolute;
-  width: 799px;
+  width: 100%;
   height: auto;
   border-top: 1px solid black;
   font-family: din-light;
-  padding: 15px 1px 8px 10px;
-  bottom: 10px;
+  padding: 8px 1px 8px 10px;
+  bottom: 0;
 }
 
 .confirmation_forward_btns ul li {
+  display: inline;
   float: right;
   font-family: din-light;
   font-size: 12px;

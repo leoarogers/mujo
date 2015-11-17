@@ -12,43 +12,43 @@
 			<div class="billing_name">
 			  <label>
 			    <span class="card_span card_cat_title">Name</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_email">
 			  <label>
 			    <span class="card_span card_cat_title">Email</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_telephone">
 			  <label>
 			    <span class="card_span card_cat_title">Telephone</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_address_1">
 			  <label>
 			    <span class="card_span card_cat_title">Address</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_address_2">
 			  <label>
 			    <span class="card_span card_cat_title address_2_hide">Address 2</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_zip_code">
 			  <label>
 			    <span class="card_span card_cat_title">Zip Code</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_city">
 			  <label>
 			    <span class="card_span card_cat_title">City</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="billing_state">
@@ -60,7 +60,7 @@
 			<div class="billing_country" style="display: none">
 			  <label>
 			    <span class="card_span card_cat_title">Country</span>
-			    <input class="input_field" type="text" size="30" />
+			    <input class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<input type="checkbox" id="shipment_checkbox"><span class="checkbox_text">Same as shipping address</span><br>
@@ -74,43 +74,43 @@
 			<div class="shipping_name">
 			  <label>
 			    <span class="card_span card_cat_title">Name</span>
-			    <input name="shipping_name" class="input_field" type="text" size="30" />
+			    <input name="shipping_name" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_email">
 			  <label>
 			    <span class="card_span card_cat_title">Email</span>
-			    <input name="shipping_email" class="input_field" type="text" size="30" />
+			    <input name="shipping_email" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_telephone">
 			  <label>
 			    <span class="card_span card_cat_title">Telephone</span>
-			    <input name="shipping_telephone" class="input_field" type="text" size="30" />
+			    <input name="shipping_telephone" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_address_1">
 			  <label>
 			    <span class="card_span card_cat_title">Address</span>
-			    <input name="shipping_address_1" class="input_field" type="text" size="30" />
+			    <input name="shipping_address_1" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_address_2">
 			  <label>
 			    <span class="card_span card_cat_title address_2_hide">Address 2</span>
-			    <input name="shipping_address_2" class="input_field" type="text" size="30" />
+			    <input name="shipping_address_2" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_zip_code">
 			  <label>
 			    <span class="card_span card_cat_title">Zip Code</span>
-			    <input name="shipping_zip_code" class="input_field" type="text" size="30" />
+			    <input name="shipping_zip_code" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_city">
 			  <label>
 			    <span class="card_span card_cat_title">City</span>
-			    <input name="shipping_city" class="input_field" type="text" size="30" />
+			    <input name="shipping_city" class="input_field" type="text" size="41" />
 			  </label>
 			</div>
 			<div class="shipping_state">
@@ -122,26 +122,41 @@
 			<div class="shipping_country" style="display: none">
 			  <label>
 			    <span class="card_span card_cat_title">Country</span>
-			    <input name="shipping_country" class="input_field" type="text" size="30" />
+			    <input name="shipping_country" class="input_field" type="text" size="41" />
 			  </label>
-			</div>
-
-			<div class="shipment_forward_btns">
-			  <ul>
-			    <li>
-			      <button class="shipment_btn" type="submit">Continue</button>
-			    </li>
-			    <li>
-			      <span class="shipment-errors">
-			      	<% if session[:shipment_error] %>
-			      		<%= session[:shipment_error] %>
-			      		<% session.delete(:shipment_error) %>
-			      	<% end %>
-			      </span>
-			    </li>
-			  </ul>
 			</div>
 		</form>	
 	</div>
 
+	<div class="shipment_forward_btns">
+	  <ul>
+	    <li>
+	      <button class="shipment_btn" type="submit">Continue</button>
+	    </li>
+	    <li>
+	      <span class="shipment-errors">
+	      	<% if session[:shipment_error] %>
+	      		<%= session[:shipment_error] %>
+	      		<% session.delete(:shipment_error) %>
+	      	<% end %>
+	      </span>
+	    </li>
+	  </ul>
+	</div>
+
 </div>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('track', 'InitiateCheckout');
+fbq('init', '766408273502804');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=766408273502804&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
