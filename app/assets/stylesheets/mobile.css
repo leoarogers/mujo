@@ -38,7 +38,7 @@
   /*SHOP PAGE*/
   .description_container {
     position: absolute;
-    width: 650px;
+    width: 630px;
     height: 170px;
     /*border: 1px solid white;*/
     left: 0;
@@ -48,7 +48,7 @@
   }
   .shop_now {
     position: absolute;
-    bottom: -60px;
+    bottom: -70px;
     left: 250px;
     border: 3px solid white;
     padding: 1px 7px 1px 7px;
@@ -68,7 +68,7 @@
   .description {
     position: relative;
     color: black;
-    width: 500px;
+    width: 480px;
     height: 170px;
     border-left: 1px solid white;
     padding-left: 15px;
