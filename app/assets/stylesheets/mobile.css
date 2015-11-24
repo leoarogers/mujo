@@ -1,0 +1,379 @@
+@media only screen and (max-device-width: 414px) and (orientation: portrait) {
+
+  /*NAVIGATION MENU*/
+  .menu {
+    position: fixed;
+    font-size: 25px;
+    right: 20px;
+    top: 17px;
+    z-index: 2;
+  }
+
+  /*SOCIAL ICONS*/
+  .social_pic {
+    width: 35px;
+    height: 35px;
+  }
+
+  /*LANDING PAGE*/
+  .title {
+    position: fixed;
+    width: 160px;
+    height: 70px;
+    background: url('logos/TextLogoWB.png') no-repeat center;
+    background-size: contain;
+    left: 0;
+    right: 0;
+    top: 40%;
+    margin: auto;
+  }
+  .main_menu {
+    position: absolute;
+    font-size: 25px;
+    top: 80px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  /*SHOP PAGE*/
+  .description_container {
+    position: absolute;
+    width: 600px;
+    height: 170px;
+    /*border: 1px solid white;*/
+    left: 0;
+    right: 0;
+    top: 40%;
+    margin: auto;
+  }
+  .shop_now {
+    position: absolute;
+    bottom: -60px;
+    left: 250px;
+    border: 3px solid white;
+    padding: 1px 7px 1px 7px;
+    color: white;
+    font-size: 25px;
+  }
+  .description_title {
+    position: relative;
+    width: 145px;
+    height: 145px;
+    margin-top: 10px;
+    margin-left: 1px;
+    background: url('logos/DottedIconWhiteNoBox.png') no-repeat center;
+    background-size: contain;
+    float: left;
+  }
+  .description {
+    position: relative;
+    color: black;
+    width: 450px;
+    height: 170px;
+    border-left: 1px solid white;
+    padding-left: 15px;
+    font-size: 20px;
+    float: right;
+  }
+  .isan_title {
+    font-family: 'din-light';
+    color: white;
+    margin-left: 0;
+    margin-top: -3px;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+  }
+  .navigation {
+    width: 100%;
+    position: absolute;
+    bottom: 200px;
+    text-align: center;
+    list-style: none;
+    z-index: 1;
+    padding-left: 0px;
+  }
+  .navigation li {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .shop_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+  }
+  .dropdown_btn {
+    border: 3px solid white;
+    font-size: 25px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    padding: 3px 15px 3px 15px;
+    color: white;
+    background-color: black;
+    font-family: 'fontAwesome', 'din-light';
+  }
+  .options {
+    position: absolute;
+    bottom: 130px;
+    left: 10px;
+  }
+  .options_extra {
+    font-family: din-light;
+    font-size: 25px;
+  }
+  .options ul li {
+    display: inline;
+    padding-left: 20px;
+    bottom: 10px;
+  }
+  .add_to_cart {
+    font-family: din-light;
+    position: absolute;
+    right: 50%;
+    bottom: 45px;
+    border: 3px solid white;
+    padding: 3px 8px 3px 8px;
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    outline: none;
+  }
+  .total {
+    font-family: din-light;
+    position: absolute;
+    right: 42%;
+    bottom: 45px;
+    color: white;
+    font-size: 30px;
+  }
+  .cart_error {
+    font-family: din-light;
+    position: absolute;
+    right: 15px;
+    bottom: 50px;
+    color: #A88C25;
+    font-size: 20px;
+  }
+  .product_specs_pop ul li {
+    font-family: din-light;
+    font-size: 25px;
+    color: black;
+    padding-bottom: 2px;
+  }
+  .product_specs_pop {
+    position: absolute;
+    height: auto;
+    bottom: 250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.8;
+    padding: 15px 10px 10px 10px;
+    width: 750px;
+  }
+  .product_specs_x {
+    position: absolute;
+    font-family: din-light;
+    color: #9CABA9;
+    right: 15px;
+    top: 0;
+    cursor: pointer;
+    font-size: 35px;
+  }
+  .size_chart_pop ul li {
+    font-family: din-light;
+    font-size: 25px;
+    color: black;
+    padding-bottom: 2px;
+  }
+  .size_chart_pop {
+    position: absolute;
+    height: auto;
+    bottom: 250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.8;
+    padding: 15px 10px 10px 10px;
+    width: 550px;
+  }
+  .checkout_tag {
+    position: absolute;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+    padding: 3px 8px 3px 8px;
+    bottom: 200px;
+    right: 0px;
+    z-index: 2;
+  }
+  .checkout_count {
+    position: absolute;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    padding: 3px 18px 3px 18px;
+    bottom: 200px;
+    right: 120px;
+  }
+  .size_chart_x {
+    position: absolute;
+    font-family: din-light;
+    color: #9CABA9;
+    right: 15px;
+    top: 0;
+    cursor: pointer;
+    font-size: 35px;
+  }
+
+  /*ABOUT PAGE*/
+  .mujo_description {
+    color: black;
+    position: fixed;
+    width: 450px;
+    height: auto;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+  }
+  .mujo_description_title {
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background: url('logos/TextBoxLogoBW.png') no-repeat center;
+    background-size: contain;
+    top: -60px;
+    left: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  /*CONTACT FORM*/
+  .contact_notify {
+    color: #A88C25;
+    position: absolute;
+    top: 365px;
+    left: 110px;
+    right: 0;
+    margin: auto;
+    font-size: 25px;
+  }
+  .contact_form_container {
+    position: absolute;
+    width: 470px;
+    height: 325px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+  .contact_form_field {
+    font-size: 25px;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+  }
+  .contact_form_btn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 25px;
+    padding: 4px 9px 4px 9px;
+    margin-top: 10px;
+  }
+  .contact_us {
+    position: absolute;
+    font-family: 'din-light';
+    font-size: 25px;
+    margin: 0px 0px 0px 0px;
+    bottom: 320px;
+  }
+  .extra {
+    position: fixed;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  /*LOOKBOOK PAGE*/
+  .lookbook_pic {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .lb_active {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: no-repeat center;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .lb_left_arrow {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    background: none;
+  }
+  .lb_right_arrow {
+    position: absolute;
+    width: 15px;
+    height: auto;
+    background: none;
+  }
+
+  /*TERMS PAGE*/
+  .terms {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+  }
+  .back_to_contact {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: black;
+    font-size: 25px;
+  }
+
+}
