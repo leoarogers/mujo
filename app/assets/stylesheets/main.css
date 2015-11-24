@@ -22,6 +22,14 @@
     font-style: normal;
 }
 
+/*HIDE MOBILE IMAGES*/
+.mb {
+  display: none;
+}
+.dk {
+  display: inline;
+}
+
 body {
   font-family: 'din-light';
   margin: 0px;
