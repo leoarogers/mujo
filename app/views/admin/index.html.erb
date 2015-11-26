@@ -1,0 +1,9 @@
+<% @contacts.each do |contact| %>
+	<strong><%= contact.email %></strong>
+	<ul style="font-size: 10px">
+		<% contact.messages.each do |message| %>
+			<li><%= message.content %></li>
+		<% end %>
+		<br>
+	</ul>
+<% end %>
