@@ -445,6 +445,7 @@ select {
 }
 
 .left_arrow {
+  display: none;
   position: absolute;
   width: 22px;
   height: 22px;
@@ -458,6 +459,7 @@ select {
 }
 
 .right_arrow {
+  display: none;
   position: absolute;
   width: 22px;
   height: 22px;
