@@ -1,3 +1,11 @@
+// determine whether or not mobile device
+var is_mobile = false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	var is_mobile = true;
+	$('.left_arrow').show();
+	$('.right_arrow').show();
+}
+
 //scroll function
 var scrollToAnchor = function( id ) {
 	var elem = $("div[id='"+ id +"']");
@@ -29,7 +37,9 @@ $(document).ready(function() {
 	});
 
 	$('.middle_right_area').mouseout(function() {
-		$('.right_arrow').fadeOut(200);
+		if (!is_mobile) {
+			$('.right_arrow').fadeOut(200);
+		};
 	});
 
 	$('.middle_left_area').hover(function() {
@@ -37,7 +47,9 @@ $(document).ready(function() {
 	});
 
 	$('.middle_left_area').mouseout(function() {
-		$('.left_arrow').fadeOut(200);
+		if (!is_mobile) {
+			$('.left_arrow').fadeOut(200);
+		};
 	});
 
 	//gallery scroll

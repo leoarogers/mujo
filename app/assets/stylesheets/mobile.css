@@ -57,7 +57,7 @@
     z-index: 1;
   }
 
-  /*HIDE SHOP ARROWS*/
+  /*ALWAYS SHOW SHOP ARROWS*/
   .left_arrow {
     display: inline;
     position: absolute;
