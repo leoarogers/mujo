@@ -61,8 +61,8 @@
   .left_arrow {
     display: inline;
     position: absolute;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     background: url('logos/ArrowWhiteLeft.png') no-repeat center;
     background-size: contain;
     left: 0;
@@ -74,8 +74,8 @@
   .right_arrow {
     display: inline;
     position: absolute;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     background: url('logos/ArrowWhiteRight.png') no-repeat center;
     background-size: contain;
     right: 0;
@@ -395,13 +395,13 @@
   }
   .lb_left_arrow {
     position: absolute;
-    width: 45px;
+    width: 30px;
     height: auto;
     background: url('logos/ArrowWhiteLeft.png') no-repeat center;
     background-size: contain;
     top: 0;
     bottom: 0;
-    left: -920px;
+    left: -940px;
     right: 0;
     margin: auto;
     z-index: 2;
@@ -409,13 +409,13 @@
 
   .lb_right_arrow {
     position: absolute;
-    width: 45px;
+    width: 30px;
     height: auto;
     background: url('logos/ArrowWhiteRight.png') no-repeat center;
     background-size: contain;
     top: 0;
     bottom: 0;
-    left: 920px;
+    left: 940px;
     right: 0;
     margin: auto;
     z-index: 2;
