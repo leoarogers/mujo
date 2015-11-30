@@ -1,4 +1,10 @@
 @media only screen and (max-device-width: 414px) and (orientation: portrait) {
+  
+  /*get rid of weird rounded corners on mobile text field*/
+  input {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
 
   /*HIDE DESKTOP IMAGES*/
   .dk {
