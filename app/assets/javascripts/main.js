@@ -25,7 +25,7 @@ $(document).ready(function() {
 	$('.down_arrow').fadeIn(2500);
 
 	// set height of shop images
-	var height = window.innerHeight ? window.innerHeight - 70 + 120 : $(window).height() - 70;
+	var height = window.innerHeight ? window.innerHeight - 70 + 150 : $(window).height() - 70;
 	// var height = $(window).height() - 70;
 	$("div.active").css('height', height+'px');
 
