@@ -15,6 +15,8 @@ var scrollToAnchor = function( id ) {
 }
 
 $(document).ready(function() {
+	// determine wether device is iphone
+	var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
 
 	$('.title').fadeIn(2500);
 
@@ -25,8 +27,13 @@ $(document).ready(function() {
 	$('.down_arrow').fadeIn(2500);
 
 	// set height of shop images
-	var height = $(window).height() - 70;
-	$("div.active").css('height', height+'px');
+	if(isiPhone > -1) {
+		var height = $(window).height() - 70 + 60;
+		$("div.active").css('height', height+'px');	
+	} else {
+		var height = $(window).height() - 70;
+		$("div.active").css('height', height+'px');
+	}
 
 	$("a").click(function( event ) {
 	  if ( $(this).attr("href").match("#") ) {
