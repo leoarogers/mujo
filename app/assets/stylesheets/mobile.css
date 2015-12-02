@@ -67,7 +67,7 @@
     background-size: contain;
     left: 0;
     top: 0;
-    bottom: 0;
+    bottom: 200px;
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -80,7 +80,7 @@
     background-size: contain;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 200px;
     margin-top: auto;
     margin-bottom: auto;
   }
