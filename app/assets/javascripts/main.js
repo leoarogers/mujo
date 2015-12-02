@@ -15,6 +15,8 @@ var scrollToAnchor = function( id ) {
 }
 
 $(document).ready(function() {
+	// check if device is iphone
+	var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
 
 	$('.title').fadeIn(2500);
 
@@ -25,7 +27,11 @@ $(document).ready(function() {
 	$('.down_arrow').fadeIn(2500);
 
 	// set height of shop images
-	var height = window.innerHeight ? window.innerHeight - 70 + 180 : $(window).height() - 70;
+	if(isiPhone > -1) {
+		var height = $(window).height() - 70 + 180
+	} else {
+		var height = $(window).height() - 70
+	}
 	$("div.active").css('height', height+'px');
 
 	$("a").click(function( event ) {
