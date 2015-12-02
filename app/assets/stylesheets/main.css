@@ -453,7 +453,7 @@ select {
   background-size: contain;
   left: 10px;
   top: 0;
-  bottom: 0;
+  bottom: 70px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -467,7 +467,7 @@ select {
   background-size: contain;
   right: 10px;
   top: 0;
-  bottom: 0;
+  bottom: 70px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -630,11 +630,12 @@ ul li img {
 div.active {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  /*height: 100vh;*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  bottom: 70px;
 }
 
 /*checkout cart styling*/

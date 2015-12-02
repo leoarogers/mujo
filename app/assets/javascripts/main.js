@@ -24,6 +24,10 @@ $(document).ready(function() {
 
 	$('.down_arrow').fadeIn(2500);
 
+	// set height of shop images
+	var height = $(window).height() - 70;
+	$("div.active").css('height', height+'px');
+
 	$("a").click(function( event ) {
 	  if ( $(this).attr("href").match("#") ) {
 	    event.preventDefault();
@@ -158,6 +162,8 @@ $(document).ready(function() {
 			$('li.active').removeClass('active');
 			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
+		var height = $(window).height() - 70;
+		$("div.active").css('height', height+'px');
 	});
 
 	$('.middle_left_area').click(function(e) {
@@ -174,6 +180,8 @@ $(document).ready(function() {
 			$('li.active').removeClass('active');
 			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
+		var height = $(window).height() - 70;
+		$("div.active").css('height', height+'px');
 	});
 
 	//product specs pop up
