@@ -168,8 +168,6 @@ $(document).ready(function() {
 			$('li.active').removeClass('active');
 			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
-		// var height = $(window).height() - 70;
-		var height = window.innerHeight ? window.innerHeight - 70 + 180 : $(window).height() - 70;
 		$("div.active").css('height', height+'px');
 	});
 
@@ -187,8 +185,6 @@ $(document).ready(function() {
 			$('li.active').removeClass('active');
 			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
-		// var height = $(window).height() - 70;
-		var height = window.innerHeight ? window.innerHeight - 70 + 180 : $(window).height() - 70;
 		$("div.active").css('height', height+'px');
 	});
 
