@@ -7,12 +7,12 @@
   }
 
   /*input field size adjustment on mobile*/
-  .input_1 {
+  /*.input_1 {
     width: 250px;
   }
   .input_2 {
     width: 120px;
-  }
+  }*/
 
   /*HIDE DESKTOP IMAGES*/
   .dk {
@@ -440,5 +440,375 @@
     color: black;
     font-size: 25px;
   }
+
+  /*SHIPMENT PAGE*/
+  .billing_form {
+    display: none;
+  }
+  .shipment_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .bill_ship_info {
+     position: absolute;
+     width: 100%;
+     height: auto;
+     background-color: black;
+     font-family: din-light;
+     color: white;
+     padding: 8px 1px 8px 10px;
+     font-size: 40px;
+     text-align: center;
+  }
+  .billing_title {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    font-size: 40px;
+  }
+  .shipping_form {
+    position: absolute;
+    top: 90px;
+    width: 900px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .input_1 {
+    width: 600px;
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  .card_cat_title {
+    border: 1px solid black;
+    background-color: #EBEBEB;
+    float: left;
+    width: 250px;
+    margin-bottom: 5px;
+    font-size: 40px;
+  }
+  .shipment_forward_btns {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid black;
+    font-family: din-light;
+    padding: 8px 1px 8px 10px;
+    bottom: 0;
+  }
+  .shipment_btn {
+    display: inline;
+    float: right;
+    font-family: din-light;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    margin-right: 15px;
+    padding: 2px 8px 2px 8px;
+    border: none;
+  }
+  .address_2_hide {
+    color: white;
+    background-color: white;
+    border: none;
+  }
+  .shipment-errors {
+    position: absolute;
+    font-family: din-light;
+    font-size: 35px;
+  }
+
+  /*CARD FORM*/
+  .checkout_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  #payment-form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; 
+  }
+  .pay_ship_info {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    font-family: din-light;
+    color: white;
+    padding: 8px 1px 8px 10px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .payment_method {
+/*    position: absolute;
+    top: 80px;*/
+    display: none;
+  }
+  .payment_method ul li {
+/*    font-family: din-light;
+    font-size: 40px;
+    padding: 0px 300px 0px 10px;
+    display: inline;*/
+    display: none;
+  }
+  .card_form {
+    position: absolute;
+    padding-top: 40px;
+    width: 900px;
+    font-family: din-light;
+    font-size: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .card_span {
+    font-family: din-light;
+    font-size: 40px;
+    padding: 2px 3px 2px 3px;
+  }
+  .cvv_icon {
+/*    position: absolute;
+    width: 40px;
+    height: 24px;
+    background: url('logos/cvv.png') no-repeat center;
+    background-size: contain;
+    left: 155px;*/
+    display: none;
+  }
+  .input_field {
+    border: 1px solid black;
+    outline: none;
+    font-size: 40px;
+    padding: 2px 3px 2px 3px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+  .card_forward_btns {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid black;
+    font-family: din-light;
+    padding: 8px 1px 8px 10px;
+    bottom: 0;
+    left: 0;
+  }
+  .submit_payment_btn {
+    display: inline;
+    float: right;
+    font-family: din-light;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    margin-right: 15px;
+    padding: 2px 8px 2px 8px;
+    border: none;
+  }
+  .stripe_icon {
+/*    position: absolute;
+    width: 93px;
+    height: 23px;
+    background: url('logos/stripe_powered.png') no-repeat center;
+    background-size: contain;
+    left: 10px;
+    bottom: 50px;*/
+    display: none;
+  }
+  .accepted_cards_icon {
+/*    position: absolute;
+    width: 135px;
+    height: 23px;
+    background: url('logos/accepted_cards.jpg') no-repeat center;
+    background-size: contain;
+    left: 263px;*/
+    display: none;
+  }
+  .card_pulled_val {
+    font-family: din-light;
+    font-size: 40px;
+  }
+  .payment-errors {
+    position: absolute;
+    font-family: din-light;
+  }
+  .card_cart_total, .card_shipping, .card_sales_tax, .card_order_total {
+    padding-bottom: 30px;
+  }
+
+ /*SHOPPING CART FORM*/
+ .cart_home_icon {
+/*   position: fixed;
+   width: 90px;
+   height: 30px;
+   background: url('logos/TextBoxLogoBW.png') no-repeat center;
+   background-size: contain;
+   top: 20px;
+   left: 10px;*/
+   display: none;
+ }
+ .cart_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+ }
+ .cart_edit_view {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  font-family: din-light;
+  color: white;
+  padding: 8px 1px 8px 10px;
+  font-size: 40px;
+  text-align: center;
+ }
+ .cart_item_count {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   border-bottom: 1px solid black;
+   font-family: din-light;
+   padding: 8px 1px 8px 10px;
+   top: 70px;
+   font-size: 40px;
+ }
+ .cart_items {
+   position: absolute;
+   top: 150px;
+   width: 100%;
+ }
+ .cart_items ul li{
+   border-bottom: 1px solid black;
+   padding: 20px 0px 20px 0px;
+   width: 100%;
+ }
+ .cart_item_info span {
+   font-family: din-light;
+   font-size: 30px;
+ }
+ .item_amount {
+   padding-left: 30px;
+   padding-right: 30px;
+ }
+ .item_remove {
+   background-color: black;
+   color: white;
+   padding: 2px 8px 2px 8px;
+ }
+ .remove_underline:hover {
+   text-decoration: none;
+ }
+ .item_price {
+   padding-left: 10px;
+ }
+ .cart_forward_btns {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   border-top: 1px solid black;
+   font-family: din-light;
+   padding: 8px 1px 8px 10px;
+   bottom: 0;
+ }
+ .cart_forward_btns ul li {
+   display: inline;
+   float: right;
+   font-family: din-light;
+   font-size: 40px;
+   background-color: black;
+   color: white;
+   margin-right: 15px;
+   padding: 2px 8px 2px 8px;
+ }
+ .cart_subtotal {
+  position: absolute;
+  width: 320px;
+  height: auto;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  font-family: din-light;
+  font-size: 40px;
+  padding: 8px 1px 8px 10px;
+  bottom: 78px; 
+  right: 0;
+ }
+
+ /*CONFIRMATION SCREEN*/
+ .confirmation_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+ }
+ .confirmation_title {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  font-family: din-light;
+  color: white;
+  padding: 8px 1px 8px 10px;
+  font-size: 40px;
+  text-align: center;
+ }
+ .confirmation_text {
+   position: absolute;
+   top: 90px;
+   left: 10px;
+ }
+ .confirmation_text li {
+   font-family: din-light;
+   font-size: 40px;
+   padding-top: 10px;
+ }
+ .confirmation_forward_btns {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   border-top: 1px solid black;
+   font-family: din-light;
+   padding: 8px 1px 8px 10px;
+   bottom: 0;
+ }
+ .confirmation_forward_btns ul li {
+   display: inline;
+   float: right;
+   font-family: din-light;
+   font-size: 40px;
+   background-color: black;
+   color: white;
+   margin-right: 15px;
+   padding: 2px 8px 2px 8px;
+ }
 
 }
