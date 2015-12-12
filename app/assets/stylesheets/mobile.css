@@ -25,7 +25,7 @@
   /*NAVIGATION MENU*/
   .menu {
     position: fixed;
-    font-size: 25px;
+    font-size: 35px;
     right: 20px;
     top: 17px;
     z-index: 2;
@@ -51,7 +51,7 @@
   }
   .main_menu {
     position: absolute;
-    font-size: 35px;
+    font-size: 40px;
     top: 100px;
     left: 0px;
     z-index: 1;
