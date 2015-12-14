@@ -99,11 +99,22 @@
   .shop_now {
     position: absolute;
     bottom: -70px;
-    left: 320px;
+    left: 230px;
     border: 2px solid white;
-    padding: 3px 15px 3px 15px;
     color: white;
+    padding: 3px 15px 3px 15px;
     font-size: 25px;
+    width: 300px;
+  }
+  .shop_red {
+    position: absolute;
+    bottom: -130px;
+    left: 230px;
+    border: 1px solid #A30026;
+    background-color: #A30026;
+    padding: 3px 15px 3px 15px;
+    font-size: 25px;
+    width: 300px;
   }
   .description_title {
     position: relative;

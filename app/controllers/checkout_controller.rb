@@ -56,6 +56,12 @@ class CheckoutController < ApplicationController
 				all_items[:black_medium] += item['amount'].to_i
 			elsif item['color'] == "Black" && item['size'].split.first == "L"
 				all_items[:black_large] += item['amount'].to_i
+			elsif item['color'] == "Red" && item['size'].split.first == "S"
+				all_items[:red_small] += item['amount'].to_i
+			elsif item['color'] == "Red" && item['size'].split.first == "M"
+				all_items[:red_medium] += item['amount'].to_i
+			elsif item['color'] == "Red" && item['size'].split.first == "L"
+				all_items[:red_large] += item['amount'].to_i
 			end
 		end
 
@@ -75,7 +81,10 @@ class CheckoutController < ApplicationController
 		    	white_large: all_items[:white_large],
 		    	black_small: all_items[:black_small],
 		    	black_medium: all_items[:black_medium],
-		    	black_large: all_items[:black_large]
+		    	black_large: all_items[:black_large],
+		    	red_small: all_items[:red_small],
+		    	red_medium: all_items[:red_medium],
+		    	red_large: all_items[:red_large]
 		    }
 		  )
 		rescue Stripe::CardError => e

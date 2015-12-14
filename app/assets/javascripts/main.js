@@ -164,7 +164,8 @@ $(document).ready(function() {
 		} else {
 			shop_pic_number = 1;
 			$('div.active').removeClass('active');
-			$('div.shop_' + shop_pic_number).addClass('active');
+			// $('div.shop_' + shop_pic_number).addClass('active');
+			$('.color_way').addClass('active');
 			$('li.active').removeClass('active');
 			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		};
@@ -175,7 +176,11 @@ $(document).ready(function() {
 		if (shop_pic_number > 1) {
 			shop_pic_number -= 1;
 			$('div.active').removeClass('active');
-			$('div.shop_' + shop_pic_number).addClass('active');
+			if (shop_pic_number == 1) {
+				$('.color_way').addClass('active');
+			} else {
+				$('div.shop_' + shop_pic_number).addClass('active');
+			};
 			$('li.active').removeClass('active');
 			$('li[data=shop_' + shop_pic_number + ']').addClass('active');
 		} else {
@@ -252,5 +257,17 @@ $(document).ready(function() {
 	      }
 	    });
 	  });
+
+	//display different intial shop image depending on which shop button is clicked
+	$('.shop_now').on('click', function() {
+		$('#middle_half').show();
+		$('.bw_photo').addClass('color_way active');
+		$('.red_photo').removeClass('color_way active');
+	});
+	$('.shop_red').on('click', function() {
+		$('#middle_half').show();
+		$('.red_photo').addClass('color_way active');
+		$('.bw_photo').removeClass('color_way active');
+	});
 
 })
