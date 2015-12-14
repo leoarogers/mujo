@@ -5,10 +5,8 @@ class CartController < ApplicationController
 	def create
 		item = {color: params['color'], size: params['size'], amount: params['amount']}
 		if params['color'] == "" || params['size'] == "" || params['amount'] == ""
-			session[:error] = "Please select a color, size, and quantity"
+			render json: {error: "Please select a color, size, and quantity"}
 		else
-			# session[:item] ? session[:item].push(item) : session[:item] = [item]
-			# session[:error] = "Item added to cart"
 			if session[:item]
 				match = false
 				session[:item].each do |x|
@@ -17,13 +15,20 @@ class CartController < ApplicationController
 						match = true
 					end
 				end
+				item = Hash[item.map{ |k, v| [k.to_s, v] }]
 				session[:item].push(item) if !match
 			else
+				item = Hash[item.map{ |k, v| [k.to_s, v] }]
 				session[:item] = [item]
 			end
-			session[:error] = "Item added to cart"
+			# add up total and return in json
+			puts "LOLOL"
+			puts session[:item]
+			counter = 0
+			session[:item].each{|x| counter += x['amount'].to_i}
+			render json: {error: "Item added to cart", amount: counter}
 		end
-		redirect_to shop_index_path(anchor: 'middle_half')
+		# redirect_to shop_index_path(anchor: 'middle_half')
 	end
 
 	def index

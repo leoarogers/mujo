@@ -260,14 +260,32 @@ $(document).ready(function() {
 
 	//display different intial shop image depending on which shop button is clicked
 	$('.shop_now').on('click', function() {
-		$('#middle_half').show();
 		$('.bw_photo').addClass('color_way active');
 		$('.red_photo').removeClass('color_way active');
 	});
 	$('.shop_red').on('click', function() {
-		$('#middle_half').show();
 		$('.red_photo').addClass('color_way active');
 		$('.bw_photo').removeClass('color_way active');
 	});
+
+	//update cart count
+	$('.add_to_cart').on('click', function(event){
+	    event.preventDefault();
+	    var $target = $('form');
+	    $.ajax({
+	      url: '/cart',
+	      type: 'post',
+	      data: $target.serialize(),
+	      success: function(response) {
+	      	$('.cart_error').text(response.error);
+	      	console.log(response.amount);
+	      	if (response.amount > 0) {
+	      		$('.checkout_count').text(response.amount);
+	      		$('.checkout_count').show();
+	      		$('.checkout_tag').show();
+	      	}
+	      }
+	    });
+	  });
 
 })

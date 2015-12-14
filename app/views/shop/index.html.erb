@@ -21,7 +21,7 @@
 		</div>
 </div>
 
-<div id="middle_half" class="middle-page-wrap" style="display: none">
+<div id="middle_half" class="middle-page-wrap">
 
 	<!-- Left and right arrows -->
 	<a href="#"><div class="right_arrow"></div></a>
@@ -54,7 +54,7 @@
 
 	<div class="shop_bar">
 
-		<%= form_for(:cart, url: cart_index_path) do |f| %>
+		<%= form_for(:cart, url: cart_index_path, class: 'shop_form') do |f| %>
 			<div class="options">
 				<ul>
 					<li>
@@ -90,10 +90,7 @@
 					</li>
 				</ul>
 			</div>
-			<% if session[:error] %>
-				<span class="cart_error"><%= session[:error] %></span>
-				<% session.delete(:error) %>
-			<% end %>
+			<span class="cart_error"></span>
 			<%= f.submit "Add To Cart", {class: "add_to_cart"} %>
 		<% end %>
 
@@ -101,7 +98,7 @@
 			<span class="product_specs_x">x</span>
 			<ul>
 				<li>- Handcrafted in Brooklyn, NY, USA</li>
-				<li>- 6mm White Howlite/Matte Black Onyx stones</li>
+				<li>- 6mm White Howlite/Matte Black Onyx/Red Jasper stones</li>
 				<li>- 6mm 14K gold filled bead</li>
 				<li>- Packaged in our signature black box with a tissue paper insert </li>
 				<li>- Individually hand stamped with a wax seal</li>
