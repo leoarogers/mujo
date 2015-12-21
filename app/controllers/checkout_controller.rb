@@ -44,18 +44,24 @@ class CheckoutController < ApplicationController
 		shopping_cart.each do |item|
 			puts item['color']
 			puts item['size']
-			if item['color'] == "White" && item['size'].split.first == "S"
+			if item['color'] == "White" && item['size'].split.first == "X"
+				all_items[:white_extra_small] += item['amount'].to_i
+			elsif item['color'] == "White" && item['size'].split.first == "S"
 				all_items[:white_small] += item['amount'].to_i
 			elsif item['color'] == "White" && item['size'].split.first == "M"
 				all_items[:white_medium] += item['amount'].to_i
 			elsif item['color'] == "White" && item['size'].split.first == "L"
 				all_items[:white_large] += item['amount'].to_i
+			elsif item['color'] == "Black" && item['size'].split.first == "X"
+				all_items[:black_extra_small] += item['amount'].to_i
 			elsif item['color'] == "Black" && item['size'].split.first == "S"
 				all_items[:black_small] += item['amount'].to_i
 			elsif item['color'] == "Black" && item['size'].split.first == "M"
 				all_items[:black_medium] += item['amount'].to_i
 			elsif item['color'] == "Black" && item['size'].split.first == "L"
 				all_items[:black_large] += item['amount'].to_i
+			elsif item['color'] == "Red" && item['size'].split.first == "X"
+				all_items[:red_extra_small] += item['amount'].to_i
 			elsif item['color'] == "Red" && item['size'].split.first == "S"
 				all_items[:red_small] += item['amount'].to_i
 			elsif item['color'] == "Red" && item['size'].split.first == "M"
@@ -76,12 +82,15 @@ class CheckoutController < ApplicationController
 		    	email: session[:address_to]['email'],
 		    	name: session[:address_to]['name'],
 		    	phone: session[:address_to]['phone'],
+		    	white_extra_small: all_items[:white_extra_small],
 		    	white_small: all_items[:white_small],
 		    	white_medium: all_items[:white_medium],
 		    	white_large: all_items[:white_large],
+		    	black_extra_small: all_items[:black_extra_small],
 		    	black_small: all_items[:black_small],
 		    	black_medium: all_items[:black_medium],
 		    	black_large: all_items[:black_large],
+		    	red_extra_small: all_items[:red_extra_small],
 		    	red_small: all_items[:red_small],
 		    	red_medium: all_items[:red_medium],
 		    	red_large: all_items[:red_large]
