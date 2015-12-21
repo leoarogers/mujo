@@ -207,6 +207,18 @@
     font-size: 25px;
     outline: none;
   }
+  .sold_out {
+    font-family: din-light;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+    border: 2px solid white;
+    padding: 3px 15px 3px 15px;
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    outline: none;
+  }
   .total {
     font-family: din-light;
     position: absolute;

@@ -322,6 +322,19 @@ select {
   outline: none;
 }
 
+.sold_out {
+  font-family: din-light;
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+  border: 1px solid white;
+  padding: 3px 8px 3px 8px;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  outline: none;
+}
+
 .cart_error {
   font-family: din-light;
   position: absolute;
