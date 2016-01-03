@@ -124,6 +124,7 @@ class CheckoutController < ApplicationController
 		shipment = Shippo::Shipment.create(
 		  :object_purpose => 'PURCHASE',
 		  :submission_type => 'DROPOFF',
+		  :submission_date => 1.day.from_now,
 		  :address_from => session[:address_from],
 		  :address_to => session[:address_to],
 		  :parcel => parcel)
