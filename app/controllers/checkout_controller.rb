@@ -42,9 +42,7 @@ class CheckoutController < ApplicationController
 		shopping_cart = session[:item]
 		all_items = Hash.new(0)
 		shopping_cart.each do |item|
-			puts item['color']
-			puts item['size']
-			if item['color'] == "White" && item['size'].split.first == "X"
+			if item['color'] == "White" && item['size'].split.first == "XS"
 				all_items[:white_extra_small] += item['amount'].to_i
 			elsif item['color'] == "White" && item['size'].split.first == "S"
 				all_items[:white_small] += item['amount'].to_i
@@ -52,7 +50,7 @@ class CheckoutController < ApplicationController
 				all_items[:white_medium] += item['amount'].to_i
 			elsif item['color'] == "White" && item['size'].split.first == "L"
 				all_items[:white_large] += item['amount'].to_i
-			elsif item['color'] == "Black" && item['size'].split.first == "X"
+			elsif item['color'] == "Black" && item['size'].split.first == "XS"
 				all_items[:black_extra_small] += item['amount'].to_i
 			elsif item['color'] == "Black" && item['size'].split.first == "S"
 				all_items[:black_small] += item['amount'].to_i
@@ -60,7 +58,7 @@ class CheckoutController < ApplicationController
 				all_items[:black_medium] += item['amount'].to_i
 			elsif item['color'] == "Black" && item['size'].split.first == "L"
 				all_items[:black_large] += item['amount'].to_i
-			elsif item['color'] == "Red" && item['size'].split.first == "X"
+			elsif item['color'] == "Red" && item['size'].split.first == "XS"
 				all_items[:red_extra_small] += item['amount'].to_i
 			elsif item['color'] == "Red" && item['size'].split.first == "S"
 				all_items[:red_small] += item['amount'].to_i
