@@ -6,12 +6,13 @@ class CheckoutController < ApplicationController
 			counter = 0
 			session[:item].each{|x| counter += x['amount'].to_i}
 			@price = counter * 50
-			if session[:address_to]['state'] == "ny" || session[:address_to]['state'] == "NY" || session[:address_to]['state'] == "Ny" || session[:address_to]['state'] == "nY"
+			if session[:address_to]['state'].downcase == "ny"
 				@tax = ((@price + 5)*0.08875).round(2)
 			else
 				@tax = 0
 			end
-			@order_total = (@tax + @price + 5).round(2)
+			session[:address_to]['country'] == "US" ? @shipping_price = 0 : @shipping_price = 10
+			@order_total = (@tax + @price + @shipping_price).round(2)
 			# separate display total string to account for trailing 0s
 			@display_total = format('%.2f', @order_total)
 			redirect_to shop_index_path(anchor: 'middle_half') if @price == 0
@@ -26,8 +27,8 @@ class CheckoutController < ApplicationController
 		# STRIPE PAYMENT
 
 		# Set your secret key: remember to change this to your live secret key in production
-		Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
-		# Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
+		# Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
+		Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
 
 		# Get the credit card details submitted by the form
 		token = params[:stripeToken]
@@ -106,7 +107,7 @@ class CheckoutController < ApplicationController
 		counter = 0
 		session[:item].each{|x| counter+= x['amount'].to_i}
 		item_count = counter
-		item_count == 1 ? weight = 3 : weight = 5
+		weight = item_count * 3
 
 		# Create parcel object
 		parcel = {
@@ -141,6 +142,9 @@ class CheckoutController < ApplicationController
 		rates = shipment.rates()
 
 		# Get the first rate in the rates results
+		rates = rates.sort_by{|x| x['amount'].to_f}
+		puts "SEE RATES BELOW................"
+		puts rates
 		rate = rates[0]
 
 		puts "Rates generated. Purchasing a #{rate.provider} #{rate.servicelevel_name} label"

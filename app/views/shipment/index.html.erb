@@ -57,10 +57,16 @@
 			    <input class="input_field input_1" type="text" size="3" />
 			  </label>
 			</div>
-			<div class="billing_country" style="display: none">
+			<div class="billing_country">
 			  <label>
 			    <span class="card_span card_cat_title">Country</span>
-			    <input class="input_field input_1" type="text" size="41" />
+			    <!-- <input class="input_field input_1" type="text" size="41" /> -->
+			    <select name="billing_country" class="dropdown_btn_country">
+			    	<option value="US">United States</option>
+			    	<% @country_list.each do |key, val| %>
+			    		<option value=<%= key %>><%= val %></option>
+			    	<% end %>
+			    </select>
 			  </label>
 			</div>
 			<input type="checkbox" id="shipment_checkbox"><span class="checkbox_text">Same as shipping address</span><br>
@@ -119,10 +125,16 @@
 			    <input name="shipping_state" class="input_field input_1" type="text" size="3" />
 			  </label>
 			</div>
-			<div class="shipping_country" style="display: none">
+			<div class="shipping_country">
 			  <label>
 			    <span class="card_span card_cat_title">Country</span>
-			    <input name="shipping_country" class="input_field input_1" type="text" size="41" />
+			    <!-- <input name="shipping_country" class="input_field input_1" type="text" size="41" /> -->
+			    <select name="shipping_country" class="dropdown_btn_country">
+			    	<option value="US">United States</option>
+			    	<% @country_list.each do |key, val| %>
+			    		<option value=<%= key %>><%= val %></option>
+			    	<% end %>
+			    </select>
 			  </label>
 			</div>
 		</form>	

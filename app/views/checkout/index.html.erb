@@ -6,8 +6,8 @@
 
 <script type="text/javascript">
   // This identifies your website in the createToken call below
-  Stripe.setPublishableKey('pk_live_ITbKAUMC7tG4HfeY3gY5lv85');
-  // Stripe.setPublishableKey('pk_test_qIQOZUyxbefJLS3XG7fXMnXa');
+  // Stripe.setPublishableKey('pk_live_ITbKAUMC7tG4HfeY3gY5lv85');
+  Stripe.setPublishableKey('pk_test_qIQOZUyxbefJLS3XG7fXMnXa');
 
   var stripeResponseHandler = function(status, response) {
     var $form = $('#payment-form');
@@ -83,7 +83,7 @@
       <div class="card_shipping">
         <label>
           <span class="card_span card_cat_title">Shipping</span>
-          <span class="card_pulled_val">$5 (USPS First-Class Mail)</span>
+          <span class="card_pulled_val">$<%= @shipping_price %> (USPS First-Class Mail)</span>
         </label>
       </div>
       <div class="card_sales_tax">

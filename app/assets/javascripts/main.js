@@ -224,7 +224,9 @@ $(document).ready(function() {
 	        $('.shipping_zip_code input:text').val($('.billing_zip_code input').val());
 	        $('.shipping_city input:text').val($('.billing_city input').val());
 	        $('.shipping_state input:text').val($('.billing_state input').val());
-	        $('.shipping_country input:text').val($('.billing_country input').val());
+	        // $('.shipping_country input:text').val($('.billing_country input').val());
+	        $('select[name="shipping_country"] option:selected').text($('select[name="billing_country"] option:selected').text())
+	        $('select[name="shipping_country"] option:selected').val($('select[name="billing_country"] option:selected').val())
 	    }else{
 	        $('.shipping_name input:text').val("");
 	        $('.shipping_email input:text').val("");
@@ -234,7 +236,8 @@ $(document).ready(function() {
 	        $('.shipping_zip_code input:text').val("");
 	        $('.shipping_city input:text').val("");
 	        $('.shipping_state input:text').val("");
-	        $('.shipping_country input:text').val("");
+	        $('select[name="billing_country"] option:selected').text("United States");
+	        $('select[name="billing_country"] option:selected').val("US");
 	    }
 	});
 
