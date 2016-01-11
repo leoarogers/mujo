@@ -27,8 +27,8 @@ class CheckoutController < ApplicationController
 		# STRIPE PAYMENT
 
 		# Set your secret key: remember to change this to your live secret key in production
-		# Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
-		Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
+		Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
+		# Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
 
 		# Get the credit card details submitted by the form
 		token = params[:stripeToken]
@@ -116,19 +116,46 @@ class CheckoutController < ApplicationController
 		  :height => 1.5,
 		  :distance_unit => :in,
 		  :weight => weight,
-		  :mass_unit => :oz}
+		  :mass_unit => :oz
+		}
 
-		# Creating the shipment object
-		puts "Creating shipment object.."
-		shipment = Shippo::Shipment.create(
-		  :object_purpose => 'PURCHASE',
-		  :submission_type => 'DROPOFF',
-		  :submission_date => 1.day.from_now,
-		  :address_from => session[:address_from],
-		  :address_to => session[:address_to],
-		  :parcel => parcel)
-
-		puts "Shipment created. Waiting for rates to be generated.."
+		# Create shipment object based on domestic of international shipping
+		if session[:address_to][:country] == "US"
+			# Creating the shipment object
+			shipment = Shippo::Shipment.create(
+			  :object_purpose => 'PURCHASE',
+			  :submission_type => 'DROPOFF',
+			  :submission_date => 1.day.from_now,
+			  :address_from => session[:address_from],
+			  :address_to => session[:address_to],
+			  :parcel => parcel)
+		else
+			customs_item = {
+			    :description => "Beaded Bracelet",
+			    :quantity => item_count,
+			    :net_weight => weight,
+			    :mass_unit => "oz",
+			    :value_amount => item_count*50,
+			    :value_currency => "USD",
+			    :origin_country => "US"
+			}
+			customs_declaration = Shippo::Customs_Declaration.create(
+			    :contents_type => "MERCHANDISE",
+			    :contents_explanation => "beaded bracelet purchase",
+			    :non_delivery_option => "RETURN",
+			    :certify => true,
+			    :certify_signer => "Mujo NYC",
+			    :items => [customs_item]
+			)
+			shipment = Shippo::Shipment.create(
+			    :object_purpose => 'PURCHASE',
+			    :address_from => session[:address_from],
+			    :address_to => session[:address_to],
+			    :parcel => parcel,
+			    :customs_declaration => customs_declaration,
+			    :async => false
+			)
+		end
 
 		# Wait for rates to be generated
 		timeout_rates_request = 25 # seconds
@@ -141,11 +168,12 @@ class CheckoutController < ApplicationController
 		# Get all rates for shipment.
 		rates = shipment.rates()
 
-		# Get the first rate in the rates results
-		rates = rates.sort_by{|x| x['amount'].to_f}
+		# Get rates after sort
 		puts "SEE RATES BELOW................"
 		puts rates
-		rate = rates[0]
+		potential_rates = rates.select{|x| x[:servicelevel_name] != "Library Mail" && x[:servicelevel_name] != "Media Mail"}
+		rates = potential_rates.sort_by{|x| x['amount'].to_f}
+		rate = rates.first
 
 		puts "Rates generated. Purchasing a #{rate.provider} #{rate.servicelevel_name} label"
 

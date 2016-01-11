@@ -557,6 +557,21 @@
     font-family: din-light;
     font-size: 35px;
   }
+  .dropdown_btn_country {
+    border: 1px solid black;
+    font-size: 40px;
+    width: 600px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    padding: 3px 15px 3px 15px;
+    color: black;
+    background-color: white;
+    font-family: 'fontAwesome', 'din-light';
+
+    outline: none;
+    padding: 2px 3px 2px 3px;
+    margin-left: 10px;
+  }
 
   /*CARD FORM*/
   .checkout_container {

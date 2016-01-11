@@ -45,28 +45,45 @@ class ShipmentController < ApplicationController
 		  :email => params['shipping_email']
 		}
 
-		if address_to[:name] == "" || address_to[:street1] == "" || address_to[:city] == "" || address_to[:state] == "" || address_to[:zip] == "" || address_to[:country] == "" || address_to[:email] == ""
-			session[:shipment_error] = "Please fill in required blank fields"
-			# redirect_to :back
-			render json: {error: session[:shipment_error]}
-		elsif !ValidateEmail.valid?(address_to[:email])
-			session[:shipment_error] = "Please enter valid email address"
-			# redirect_to :back
-			render json: {error: session[:shipment_error]}
-		elsif address_to[:state].length != 2
-			session[:shipment_error] = "Please enter 2 letter abbreviation of state"
-			# redirect_to :back
-			render json: {error: session[:shipment_error]}
-		else
-			validation = Shippo::Address.create(address_to).validate()
-			if validation['object_state'] === 'INVALID'
-				session[:shipment_error] = validation['messages'].first[:text]
-				# redirect_to :back
+		# Create different restrictions based on country
+		if address_to[:country] == "US" || address_to[:country] == "CA"
+			if address_to[:name] == "" || address_to[:street1] == "" || address_to[:city] == "" || address_to[:state] == "" || address_to[:zip] == "" || address_to[:country] == "" || address_to[:email] == "" || address_to[:phone] == ""
+				session[:shipment_error] = "Please fill in required blank fields"
+				render json: {error: session[:shipment_error]}
+			elsif !ValidateEmail.valid?(address_to[:email])
+				session[:shipment_error] = "Please enter valid email address"
+				render json: {error: session[:shipment_error]}
+			elsif address_to[:state].length != 2
+				session[:shipment_error] = "Please enter 2 letter abbreviation of state"
 				render json: {error: session[:shipment_error]}
 			else
-				session[:address_from] = address_from
-				session[:address_to] = address_to
-				redirect_to checkout_index_path
+				validation = Shippo::Address.create(address_to).validate()
+				if validation['object_state'] === 'INVALID'
+					session[:shipment_error] = validation['messages'].first[:text]
+					render json: {error: session[:shipment_error]}
+				else
+					session[:address_from] = address_from
+					session[:address_to] = address_to
+					redirect_to checkout_index_path
+				end
+			end
+		else
+			if address_to[:name] == "" || address_to[:street1] == "" || address_to[:city] == "" || address_to[:zip] == "" || address_to[:country] == "" || address_to[:email] == "" || address_to[:phone] == ""
+				session[:shipment_error] = "Please fill in required blank fields"
+				render json: {error: session[:shipment_error]}
+			elsif !ValidateEmail.valid?(address_to[:email])
+				session[:shipment_error] = "Please enter valid email address"
+				render json: {error: session[:shipment_error]}
+			else
+				validation = Shippo::Address.create(address_to).validate()
+				if validation['object_state'] === 'INVALID'
+					session[:shipment_error] = validation['messages'].first[:text]
+					render json: {error: session[:shipment_error]}
+				else
+					session[:address_from] = address_from
+					session[:address_to] = address_to
+					redirect_to checkout_index_path
+				end
 			end
 		end
 	end

@@ -1023,6 +1023,11 @@ div.active {
   font-size: 11px;
 }
 
+.intl_shipping_note {
+  font-size: 11px;
+  padding: 2px 8px 2px 8px;
+}
+
 /*Confirmation*/
 /*------------------------------------------*/
 
