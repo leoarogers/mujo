@@ -62,6 +62,18 @@ class ShipmentController < ApplicationController
 					session[:shipment_error] = validation['messages'].first[:text]
 					render json: {error: session[:shipment_error]}
 				else
+					# keep track of shipping addresses when arriving at checkout page
+					Address.create(
+						name: address_to[:name],
+						street1: address_to[:street1],
+						street2: address_to[:street2],
+						city: address_to[:city],
+						state: address_to[:state],
+						zip: address_to[:zip],
+						country: address_to[:country],
+						phone: address_to[:phone],
+						email:address_to[:email]
+					)
 					session[:address_from] = address_from
 					session[:address_to] = address_to
 					redirect_to checkout_index_path
@@ -80,6 +92,18 @@ class ShipmentController < ApplicationController
 					session[:shipment_error] = validation['messages'].first[:text]
 					render json: {error: session[:shipment_error]}
 				else
+					# keep track of shipping addresses when arriving at checkout page
+					Address.create(
+						name: address_to[:name],
+						street1: address_to[:street1],
+						street2: address_to[:street2],
+						city: address_to[:city],
+						state: address_to[:state],
+						zip: address_to[:zip],
+						country: address_to[:country],
+						phone: address_to[:phone],
+						email:address_to[:email]
+					)
 					session[:address_from] = address_from
 					session[:address_to] = address_to
 					redirect_to checkout_index_path
