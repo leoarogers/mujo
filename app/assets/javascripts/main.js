@@ -263,10 +263,12 @@ $(document).ready(function() {
 
 	//display different intial shop image depending on which shop button is clicked
 	$('.shop_now').on('click', function() {
+		$('.middle-page-wrap').show();
 		$('.bw_photo').addClass('color_way active');
 		$('.red_photo').removeClass('color_way active');
 	});
 	$('.shop_red').on('click', function() {
+		$('.middle-page-wrap').show();
 		$('.red_photo').addClass('color_way active');
 		$('.bw_photo').removeClass('color_way active');
 	});
