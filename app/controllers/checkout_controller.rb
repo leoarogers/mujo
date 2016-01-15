@@ -26,9 +26,8 @@ class CheckoutController < ApplicationController
 		
 		# STRIPE PAYMENT
 
-		# Set your secret key: remember to change this to your live secret key in production
-		Stripe.api_key = "sk_live_do23yW0yPbn7veuAqBq4pM66"
-		# Stripe.api_key = "sk_test_pcgoDe3sWoc3lGE2tjlyzDst"
+		# Set your stripe API key
+		Stripe.api_key = ENV['stripe_api_key']
 
 		# Get the credit card details submitted by the form
 		token = params[:stripeToken]
@@ -101,7 +100,7 @@ class CheckoutController < ApplicationController
 
 		# SHIPPO API CALL
 
-		Shippo::api_token = 'c8182218ae6f0517b79282c0ce455174758eb70d'
+		Shippo::api_token = ENV['shippo_api_key']
 
 		# set weight depending on how many items are in the cart
 		counter = 0

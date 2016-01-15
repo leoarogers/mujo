@@ -1,3 +1,5 @@
+<div id="data_div" data-parent=<%= ENV['stripe_publishable_key'] %>></div>
+
 <!-- The required Stripe lib -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
@@ -6,8 +8,8 @@
 
 <script type="text/javascript">
   // This identifies your website in the createToken call below
-  Stripe.setPublishableKey('pk_live_ITbKAUMC7tG4HfeY3gY5lv85');
-  // Stripe.setPublishableKey('pk_test_qIQOZUyxbefJLS3XG7fXMnXa');
+  var stripe_publishable_key = $('#data_div').data('parent');
+  Stripe.setPublishableKey(stripe_publishable_key);
 
   var stripeResponseHandler = function(status, response) {
     var $form = $('#payment-form');
