@@ -26,6 +26,13 @@ $(document).ready(function() {
 
 	$('.down_arrow').fadeIn(2500);
 
+	// click to show submenu on mobile
+	if(isiPhone > -1) {
+		$('.show_submenu').click(function() {
+			$('.submenu').show();
+		});
+	};
+
 	// set height of shop images
 	if(isiPhone > -1) {
 		var height = $(window).height() - 70 + 180
