@@ -52,7 +52,7 @@
     position: fixed;
     width: 180px;
     height: 90px;
-    background: url('logos/TextLogoWB.png') no-repeat center;
+    background: url('logos/TextBoxLogoBW.png') no-repeat center;
     background-size: contain;
     left: 0;
     right: 0;
@@ -65,6 +65,11 @@
     top: 100px;
     left: 0px;
     z-index: 1;
+  }
+
+  .main_menu ul li a {
+    color: black;
+    font-size: 40px;
   }
 
   /*ALWAYS SHOW SHOP ARROWS*/
