@@ -1,133 +1,27 @@
-<%= link_to root_path do %>
-<div class="upper_left_icon"></div>
-<% end %>
-
 <div class="menu">
-	<span><%= link_to 'SHOP', shop_index_path %></span>
-	<span><%= link_to 'ABOUT', about_index_path %></span>
-	<span><%= link_to 'LOOKBOOK', lookbook_index_path %></span>
-  	<span><%= link_to 'CONTACT', contact_index_path %></span>
+	<span><%= link_to 'SHOP', shop_index_path, class: "white_a"  %></span>
+	<span><%= link_to 'ABOUT', about_index_path, class: "white_a"  %></span>
+	<span>
+	<div class="white_a show_submenu lookbook_drop_white">LOOKBOOK</span>
+		<div class="submenu">
+		  <span><%= link_to '2016 Core', core_lookbook_index_path, class: "white_a" %></span><br>
+		  <span><%= link_to '2015 Isan', isan_lookbook_index_path, class: "white_a" %></span><br>
+		</div>
+	</div>
+	<span><%= link_to 'CONTACT', contact_index_path, class: "white_a" %></span><br>
 </div>
 
 <div class="shop-page-wrap">
-		<div class="description_container" style="display: none">
-			<div class="description_title"></div>
-			<div class="description">
-				<span class="isan_title">The Isan Beaded Bracelet Collection</span>
-				<span class="isan_description">Inspired by Zen family tradition. Designed for our approach to life. 6mm semi-precious gemstones and a single 14K gold filled bead - a reminder to embrace the breaks, gaps, and disruptions in life's path. Handcrafted in Brooklyn, NY, USA.<span>
-			</div>
-			<a href="#middle_half"><div class="shop_now">Shop Original</div></a>
-			<!-- <a href="#middle_half"><div class="shop_red">Shop Limited Edition</div></a> -->
-		</div>
+	<div class="date">4.16.16
+		<div class="release">2016 Core Collection</div>
+		<div class="time">10 AM EST</div>
+		<div class="core_coming_soon"><%= link_to 'View Lookbook', core_lookbook_index_path %></div>
+	</div>
 </div>
 
-<div id="middle_half" class="middle-page-wrap" style="display: none">
-
-	<!-- Left and right arrows -->
-	<a href="#"><div class="right_arrow"></div></a>
-	<a href="#"><div class="left_arrow"></div></a>
-
-	<!-- Indicators -->
-    <ol class="navigation">
-        <li data="shop_1" class="active"></li>
-        <li data="shop_2"></li>
-        <li data="shop_3"></li>
-        <li data="shop_4"></li>
-    </ol>
-
-    <!-- Wrapper for Slides (mobile) -->
-    <div class="mb shop_1 active bw_photo" style="background-image: url('/images/shop_gallery/shop_1_phone.jpg')"></div>
-    <div class="mb shop_1 active red_photo" style="background-image: url('/images/shop_gallery/shop_1_red_phone.jpg')"></div>
-    <div class="mb shop_2" style="background-image: url('/images/shop_gallery/shop_2_phone.jpg')"></div>
-    <div class="mb shop_3" style="background-image: url('/images/shop_gallery/shop_3_phone.jpg')"></div>
-    <div class="mb shop_4" style="background-image: url('/images/shop_gallery/shop_4_phone.jpg')"></div>
-
-    <!-- Wrapper for Slides (desktop) -->
-    <!-- <div class="dk shop_1 active bw_photo" style="background-image: url('/images/shop_gallery/shop_1.jpg')"></div>
-    <div class="dk shop_1 active red_photo" style="background-image: url('/images/shop_gallery/shop_1_red.jpg')"></div> -->
-    <div class="dk shop_1 active bw_photo" style="background-image: url('/images/shop_gallery/WhiteBraceletZoomedOut.jpg')"></div>
-    <div class="dk shop_1 active red_photo" style="background-image: url('/images/shop_gallery/RedBraceletZoomedOut.jpg')"></div>
-    <div class="dk shop_2" style="background-image: url('/images/shop_gallery/shop_2.jpg')"></div>
-    <div class="dk shop_3" style="background-image: url('/images/shop_gallery/shop_3.jpg')"></div>
-    <div class="dk shop_4" style="background-image: url('/images/shop_gallery/shop_4.jpg')"></div>
-
-	<a href="#move_right"><div class="middle_right_area"></div></a>
-	<a href="#move_left"><div class="middle_left_area"></div></a>
-
-	<div class="shop_bar">
-
-		<%= form_for(:cart, url: cart_index_path, class: 'shop_form') do |f| %>
-			<div class="options">
-				<ul>
-					<li>
-						<select name="color" class="dropdown_btn dp_color">
-							<option value="">Color</option>
-							<option value="White">White</option>
-							<option value="Black">Black</option>
-							<!-- <option value="Red">Red</option> -->
-						</select>
-					</li>
-					<li>
-						<select name="size" class="dropdown_btn dp_size">
-							<option value="">Size</option>
-							<option value='XS - 6.0"'>XS - 6.0"</option>
-							<option value='S - 6.5"'>S - 6.5"</option>
-							<option value='M - 7.0"'>M - 7.0"</option>
-							<option value='L - 7.5"'>L - 7.5"</option>
-						</select>
-					</li>
-					<li>
-						<select name="amount" class="dropdown_btn dp_qty">
-							<option value="">Qty</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option  value="4">4</option>
-							<option value="5">5</option>
-						</select>
-					</li>
-					<li>
-						<li class="options_extra product_specs"><a href="#">Product Specs</a></li>
-						<li class="options_extra size_chart"><a href="#">Size Chart</a></li>
-						<li class="options_extra shipping_returns"><%= link_to 'Shipping & Returns', shipping_index_path %></li>
-					</li>
-				</ul>
-			</div>
-			<span class="cart_error"></span>
-			<!-- <%= f.submit "Add To Cart", {class: "add_to_cart"} %> -->
-			<div class="sold_out">Sold Out</div>
-		<% end %>
-
-		<div class="product_specs_pop" style="display: none">
-			<span class="product_specs_x">x</span>
-			<ul>
-				<li>- Handcrafted in Brooklyn, NY, USA</li>
-				<li>- 6mm White Howlite/Matte Black Onyx/Red Jasper stones</li>
-				<li>- 6mm 14K gold filled bead</li>
-				<li>- Packaged in our signature black box with a tissue paper insert </li>
-				<li>- Individually hand stamped with a wax seal</li>
-			</ul>
-		</div>
-
-		<div class="size_chart_pop" style="display: none">
-			<span class="size_chart_x">x</span>
-			<ul>
-				<li>Extra Small (6.0”) - Fits smaller women’s wrists</li>
-				<li>Small (6.5”) - Fits smaller men’s/average women’s wrists</li>
-				<li>Medium (7”) - Fits the average man</li>
-				<li>Large (7.5”) - Fits larger men’s wrists</li>
-			</ul>
-		</div>
-
-		<span class="total" value="50">$50</span>
-
-		<%= link_to cart_index_path, class: 'remove_underline' do %>
-			<div class="checkout_tag">Checkout</div>
-		<% end %>
-			<div class="checkout_count"><%= @amount %></div>
-		
-	</div>
-
+<div class="social_icons">
+	<a class="social" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconWhite.png') %>" height="13" width="13"></a>
+    <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconWhite.png') %>" height="13" width="13"></a>
 </div>
 
 <!-- Facebook Pixel Code -->

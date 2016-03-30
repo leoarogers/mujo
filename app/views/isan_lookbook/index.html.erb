@@ -5,8 +5,14 @@
 <div class="menu">
 	<span><%= link_to 'SHOP', shop_index_path, class: "black_a"  %></span>
 	<span><%= link_to 'ABOUT', about_index_path, class: "black_a"  %></span>
-	<span><%= link_to 'LOOKBOOK', lookbook_index_path, class: "black_a"  %></span>
-	<span><%= link_to 'CONTACT', contact_index_path, class: "black_a" %></span>
+	<span>
+	<div class="black_a show_submenu">LOOKBOOK</span>
+		<div class="submenu">
+		  <span><%= link_to '2016 Core', core_lookbook_index_path, class: "black_a" %></span><br>
+		  <span><%= link_to '2015 Isan', isan_lookbook_index_path, class: "black_a" %></span><br>
+		</div>
+	</div>
+	<span><%= link_to 'CONTACT', contact_index_path, class: "black_a" %></span><br>
 </div>
 
 <div class="social_icons">

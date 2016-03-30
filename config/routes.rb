@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root 'main#index'
   resources :shop
   resources :about
-  resources :lookbook
+  resources :isan_lookbook
+  resources :core_lookbook
   resources :user
-  resources :gallery
   resources :contact
   resources :policy
   resources :shipping
