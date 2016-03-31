@@ -42,6 +42,11 @@ a {
 
 a.black_a {
   color: black;
+  display: inline-block;
+}
+
+a.white_a {
+  display: inline-block;
 }
 
 a:hover {
@@ -140,8 +145,8 @@ a:hover {
 
 .lb2_active {
   position: fixed;
-  width: auto;
-  height: 550px;
+  width: 800px;
+  height: 500px;
   background: no-repeat center;
   background-size: contain;
   top: 0;
@@ -176,7 +181,7 @@ a:hover {
   background-size: contain;
   top: 0;
   bottom: 0;
-  left: -900px;
+  left: -810px;
   right: 0;
   margin: auto;
   cursor: pointer;
@@ -206,7 +211,7 @@ a:hover {
   background-size: contain;
   top: 0;
   bottom: 0;
-  left: 792px;
+  left: 747px;
   right: 0;
   margin: auto;
   cursor: pointer;
@@ -231,14 +236,16 @@ a:hover {
 .submenu {
   position: fixed;
   font-size: 10px;
-  right: 90px;
+  right: 87px;
   top: 35px;
   z-index: 2;
   display: none;
 }
 
 .show_submenu {
+  position: relative;
   display: inline-block;
+  margin-right: -4px;
 }
 
 .show_submenu:hover .submenu {
@@ -272,7 +279,7 @@ a:hover {
 .main_menu ul li a {
   color: black;
   font-size: 12px;
-}
+} 
 
 .main_menu ul li a:hover {
   color: #A88C25;
@@ -638,6 +645,7 @@ span{
   outline: none;
   box-shadow: none;
   resize: none;
+  display: block;
 }
 
 .contact_form_btn {
