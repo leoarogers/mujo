@@ -120,7 +120,7 @@ $(document).ready(function() {
 		var $target = e.target;
 		console.log($target.className);
 		if ($target.className == 'lb2_right_arrow' || $target.className == 'lb2_left_arrow') return;
-		if (lookbook2_pic_number < 9) {
+		if (lookbook2_pic_number < 8) {
 			lookbook2_pic_number += 1;
 			$('div.lb2_active').removeClass('lb2_active');
 			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
@@ -132,7 +132,7 @@ $(document).ready(function() {
 	});
 
 	$('.lb2_right_arrow').click(function(e) {
-		if (lookbook2_pic_number < 9) {
+		if (lookbook2_pic_number < 8) {
 			lookbook2_pic_number += 1;
 			$('div.lb2_active').removeClass('lb2_active');
 			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
@@ -149,7 +149,7 @@ $(document).ready(function() {
 			$('div.lb2_active').removeClass('lb2_active');
 			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
 		} else {
-			lookbook2_pic_number = 9;
+			lookbook2_pic_number = 8;
 			$('div.lb2_active').removeClass('lb2_active');
 			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
 		};
