@@ -414,11 +414,11 @@
     font-family: 'din-light';
     font-size: 25px;
     margin: 0px 0px 0px 0px;
-    bottom: 480px;
+    bottom: 430px;
   }
   .contact_body_field {
     position: absolute;
-    bottom: 20px;
+    bottom: -30px;
   }
   .extra {
     position: fixed;
