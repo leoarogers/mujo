@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'main#index'
-  resources :shop
+  # resources :shop
   resources :about
   resources :isan_lookbook
   resources :core_lookbook
