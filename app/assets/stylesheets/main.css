@@ -1239,3 +1239,9 @@ div.active {
   width: 100px;
   padding: 2px 2px 2px 2px;
 }
+
+.capsule_icon {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}

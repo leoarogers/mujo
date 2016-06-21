@@ -963,4 +963,8 @@
    padding: 2px 2px 2px 2px;
  }
 
+ .capsule_icon {
+   display: none;
+ }
+
 }
