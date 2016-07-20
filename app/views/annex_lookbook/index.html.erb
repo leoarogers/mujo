@@ -1,3 +1,7 @@
+<%= link_to root_path do %>
+<div class="upper_left_icon_black"></div>
+<% end %>
+
 <div class="menu">
 	<span><a class="black_a" href="http://shop.mujonyc.com/collections/all" target="_blank">SHOP</a></span>
 	<span><%= link_to 'ABOUT', about_index_path, class: "black_a"  %></span>
@@ -13,29 +17,27 @@
 </div>
 
 <div class="social_icons">
-  <a class="social fb_mobile" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconBlack.png') %>" height="13" width="13"></a>
+	<a class="social fb_mobile" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconBlack.png') %>" height="13" width="13"></a>
     <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconBlack.png') %>" height="13" width="13"></a>
 </div>
 
-<div class="contact-page-wrap">
 
-<div class="contact_form_container">
-	<span class="contact_us">Contact Us</span>
-	<%= form_for(:message, url: contact_index_path, html: {:class => 'contact_body_field'}) do |f| %>
-		<%= f.text_field :contact_name, placeholder: "your name", class: 'contact_form_field' %>
-		<%= f.text_field :contact_email, placeholder: "your email", class: 'contact_form_field' %>
-		<%= f.text_area :message_content, placeholder: "message", class: 'contact_form_field', size: "40x7" %>
-		<%= f.submit "send", class: 'contact_form_btn' %>
-	<% end %>
-	<div class="contact_notify"><%= session[:message] %></div>
-	<% session.delete(:message) %>
-</div>
+<div class="lookbook3-page-wrap">
 
-<div class="extra">
-	<span><%= link_to 'Terms & Privacy', policy_index_path, class: "black_a" %></span>
-	<span>|</span>
-	<span><%= link_to 'Shipping & Returns', shipping_index_path, class: "black_a" %></span>
-</div>
+	
+	<div class="lookbook3_pic">
+		<div class="lb3_left_arrow"></div>
+		<div class="lb3_right_arrow"></div>
+		<div class="lookbook_1 lb3_active" style="background-image: url('/images/lookbook3/1.jpg')"></div>
+		<div class="lookbook_2" style="background-image: url('/images/lookbook3/2.jpg')"></div>
+		<div class="lookbook_3" style="background-image: url('/images/lookbook3/3.jpg')"></div>
+		<div class="lookbook_4" style="background-image: url('/images/lookbook3/4.jpg')"></div>
+		<div class="lookbook_5" style="background-image: url('/images/lookbook3/5.jpg')"></div>
+		<div class="lookbook_6" style="background-image: url('/images/lookbook3/6.jpg')"></div>
+		<div class="lookbook_7" style="background-image: url('/images/lookbook3/7.jpg')"></div>
+		<div class="lookbook_8" style="background-image: url('/images/lookbook3/8.jpg')"></div>
+		<div class="lookbook_9" style="background-image: url('/images/lookbook3/9.jpg')"></div>
+	</div>
 
 </div>
 

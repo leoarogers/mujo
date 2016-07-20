@@ -58,7 +58,7 @@ a:hover {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-image: url('background/Homepage2.jpg');
+  background-image: url('background/Homepage3.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,7 +107,7 @@ a:hover {
   z-index: -1;
 }
 
-.lookbook-page-wrap, .lookbook2-page-wrap {
+.lookbook-page-wrap, .lookbook2-page-wrap, .lookbook3-page-wrap {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -115,7 +115,7 @@ a:hover {
   z-index: -1;
 }
 
-.lookbook_pic, .lookbook2_pic {
+.lookbook_pic, .lookbook2_pic, .lookbook3_pic {
   position: fixed;
   width: 700px;
   height: auto;
@@ -144,6 +144,21 @@ a:hover {
 }
 
 .lb2_active {
+  position: fixed;
+  width: 800px;
+  height: 500px;
+  background: no-repeat center;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.lb3_active {
   position: fixed;
   width: 800px;
   height: 500px;
@@ -188,6 +203,21 @@ a:hover {
   cursor: hand;
 }
 
+.lb3_left_arrow {
+  position: absolute;
+  width: 15px;
+  height: auto;
+  background: url('logos/ArrowBlackLeft.png') no-repeat center;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: -810px;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  cursor: hand;
+}
+
 .lb_right_arrow {
   position: absolute;
   width: 15px;
@@ -204,6 +234,21 @@ a:hover {
 }
 
 .lb2_right_arrow {
+  position: absolute;
+  width: 15px;
+  height: auto;
+  background: url('logos/ArrowBlackRight.png') no-repeat center;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: 747px;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  cursor: hand;  
+}
+
+.lb3_right_arrow {
   position: absolute;
   width: 15px;
   height: auto;
@@ -236,7 +281,7 @@ a:hover {
 .submenu {
   position: fixed;
   font-size: 10px;
-  right: 93px;
+  right: 87px;
   top: 35px;
   z-index: 2;
   display: none;
@@ -258,26 +303,36 @@ a:hover {
 
 .title {
   position: fixed;
-  width: 109px;
-  height: 40px;
-  background: url('logos/TextBoxLogoBW.png') no-repeat center;
-  background-size: contain;
+  width: 104px;
+  height: 130px;
   left: 0;
   right: 0;
-  top: 40%;
+  top: 0;
+  bottom: 0;
   margin: auto;
+}
+
+.main_menu_box {
+  position: absolute;
+  width: 109px;
+  height: 40px;
+  background: url('logos/TextLogoWB.png') no-repeat center;
+  background-size: contain;
 }
 
 .main_menu {
   position: absolute;
+  bottom: 0px;
+  right: 0px;
   font-size: 11px;
-  top: 48px;
-  left: 5px;
-  z-index: 1;
+}
+
+.main_menu ul li {
+  text-align: right;
 }
 
 .main_menu ul li a {
-  color: black;
+  color: white;
   font-size: 12px;
 } 
 

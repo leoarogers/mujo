@@ -155,6 +155,49 @@ $(document).ready(function() {
 		};
 	});
 
+	//lookbook3 scroll
+
+	var lookbook3_pic_number = 1;
+
+	$('.lookbook3_pic').click(function(e) {
+		var $target = e.target;
+		console.log($target.className);
+		if ($target.className == 'lb2_right_arrow' || $target.className == 'lb3_left_arrow') return;
+		if (lookbook3_pic_number < 9) {
+			lookbook3_pic_number += 1;
+			$('div.lb3_active').removeClass('lb3_active');
+			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
+		} else {
+			lookbook3_pic_number = 1;
+			$('div.lb3_active').removeClass('lb3_active');
+			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
+		};
+	});
+
+	$('.lb3_right_arrow').click(function(e) {
+		if (lookbook3_pic_number < 9) {
+			lookbook3_pic_number += 1;
+			$('div.lb3_active').removeClass('lb3_active');
+			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
+		} else {
+			lookbook3_pic_number = 1;
+			$('div.lb3_active').removeClass('lb3_active');
+			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
+		};
+	});
+
+	$('.lb3_left_arrow').click(function(e) {
+		if (lookbook3_pic_number > 1) {
+			lookbook3_pic_number -= 1;
+			$('div.lb3_active').removeClass('lb3_active');
+			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
+		} else {
+			lookbook3_pic_number = 9;
+			$('div.lb3_active').removeClass('lb3_active');
+			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
+		};
+	});
+
 	//shoppage scroll
 
 	$('.navigation li').click(function(e) {

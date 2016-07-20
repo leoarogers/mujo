@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :about
   resources :isan_lookbook
   resources :core_lookbook
+  resources :annex_lookbook
   resources :user
   resources :contact
   resources :policy
