@@ -9,7 +9,25 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
+
 <body>
+
+  <div class="social_icons">
+    <a class="social fb_mobile" href="https://www.facebook.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('FBIconBlack.png') %>" height="13" width="13"></a>
+      <a class="social" href="https://instagram.com/mujonyc" target="_blank"><img class="social_pic" src="<%= image_path('IGIconBlack.png') %>" height="13" width="13"></a>
+  </div>
+
+  <div class="menu">
+    <span><a class="black_a" href="http://shop.mujonyc.com/collections/all" target="_blank">SHOP</a></span>
+    <span><%= link_to 'ABOUT', about_index_path, class: "black_a"  %></span>
+    <span>
+    <div class="black_a show_submenu">LOOKBOOK</span>
+      <div class="submenu">
+        <span><%= link_to '003 Annex', annex_lookbook_index_path, class: "black_a" %></span><br>
+      </div>
+    </div>
+    <span><%= link_to 'CONTACT', contact_index_path, class: "black_a" %></span><br>
+  </div>
 
 <%= yield %>
 
@@ -21,28 +39,6 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-67854197-1', 'auto');
   ga('send', 'pageview');
-</script>
-
-<!-- adroll -->
-<script type="text/javascript">
-    adroll_adv_id = "4A3D5XDSGJCSLHZFYXURXZ";
-    adroll_pix_id = "AZSD42U6TNBVVEYM6JGWPO";
-    adroll_email = "mujonyc@gmail.com";
-    (function () {
-        var _onload = function(){
-            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
-            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
-            var scr = document.createElement("script");
-            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-            scr.setAttribute('async', 'true');
-            scr.type = "text/javascript";
-            scr.src = host + "/j/roundtrip.js";
-            ((document.getElementsByTagName('head') || [null])[0] ||
-                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        };
-        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
-        else {window.attachEvent('onload', _onload)}
-    }());
 </script>
 
 </body>
