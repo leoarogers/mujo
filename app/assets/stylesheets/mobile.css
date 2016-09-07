@@ -307,4 +307,26 @@
     color: black;
     font-size: 25px;
   }
+
+  /*PRESS PAGE*/
+  .press_pic_div {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin: auto; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .press_title {
+    position: absolute;
+    bottom: 350px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 35px;
+  }
 }

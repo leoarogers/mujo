@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :policy
   resources :shipping
   resources :admin
+  resources :press
 end

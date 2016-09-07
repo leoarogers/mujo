@@ -518,3 +518,51 @@ div.active {
   z-index: -1;
   bottom: 70px;
 }
+
+.press_pic_div {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: auto; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.press_title {
+  position: absolute;
+  bottom: 300px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.press_title span {
+  display: block;
+  font-family: 'din-light';
+  opacity: 0;
+}
+
+.press_pic {
+   position: relative;
+   width: 600px;
+   height: 600px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.press_pic_div:hover .press_pic {
+  opacity: 0.05;
+}
+
+.press_pic_div:hover .press_title span {
+  opacity: 1;
+  color: black;
+}
