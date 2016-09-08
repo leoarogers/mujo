@@ -42,7 +42,7 @@
   .submenu {
     position: fixed;
     font-size: 30px;
-    right: 190px;
+    right: 325px;
     top: 70px;
     z-index: 2;
     display: none;
@@ -78,6 +78,7 @@
     position: absolute;
     width: 300px;
     height: 120px;
+    bottom: 360px;
     background: url('logos/TextLogoWB.png') no-repeat center;
     background-size: contain;
   }
