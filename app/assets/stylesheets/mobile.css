@@ -42,7 +42,7 @@
   .submenu {
     position: fixed;
     font-size: 30px;
-    right: 325px;
+    right: 315px;
     top: 70px;
     z-index: 2;
     display: none;
@@ -329,5 +329,10 @@
     right: 0;
     margin: auto;
     font-size: 35px;
+  }
+
+  /*ADJUST CONTACT LINK SPACING*/
+  a.contact_link {
+    margin-left: -10px;
   }
 }
