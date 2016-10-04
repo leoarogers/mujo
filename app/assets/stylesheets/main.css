@@ -252,25 +252,6 @@ a:hover {
   z-index: 2;
 }
 
-.submenu {
-  position: fixed;
-  font-size: 10px;
-  right: 218px;
-  top: 35px;
-  z-index: 2;
-  display: none;
-}
-
-.show_submenu {
-  position: relative;
-  display: inline-block;
-  margin-right: -4px;
-}
-
-.show_submenu:hover .submenu {
-  display: block;
-}
-
 .lookbook_drop_white {
   color: white;
 }

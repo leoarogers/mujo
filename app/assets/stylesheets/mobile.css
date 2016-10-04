@@ -34,26 +34,11 @@
     top: 17px;
     z-index: 2;
   }
+  .menu span {
+    padding-left: 10px;
+  }
   .fb_mobile {
     display: none;
-  }
-
-  /*LOOKBOOK SUBMENU*/
-  .submenu {
-    position: fixed;
-    font-size: 30px;
-    right: 535px;
-    top: 70px;
-    z-index: 2;
-    display: none;
-  }
-  .submenu span a {
-    margin-top: 10px;
-  }
-  .show_submenu {
-    position: relative;
-    display: inline-block;
-    margin-right: -13px;
   }
 
   /*SOCIAL ICONS*/

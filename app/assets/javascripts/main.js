@@ -14,13 +14,6 @@ $(document).ready(function() {
 
 	$('.mujo_description').fadeIn(2500);
 
-	// click to show submenu on mobile
-	if(isiPhone > -1) {
-		$('.show_submenu').click(function() {
-			$('.submenu').show();
-		});
-	};
-
 	if (window.location.href == "https://www.mujonyc.com/") {
 		$('.menu').hide();
 	}
