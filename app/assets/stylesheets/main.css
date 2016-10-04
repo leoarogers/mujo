@@ -255,7 +255,7 @@ a:hover {
 .submenu {
   position: fixed;
   font-size: 10px;
-  right: 136px;
+  right: 218px;
   top: 35px;
   z-index: 2;
   display: none;
@@ -290,7 +290,7 @@ a:hover {
   position: absolute;
   width: 109px;
   height: 40px;
-  bottom: 110px;
+  bottom: 130px;
   background: url('logos/TextLogoWB.png') no-repeat center;
   background-size: contain;
 }
@@ -570,4 +570,30 @@ div.active {
 
 a.contact_link {
   margin-left: -4px;
+}
+
+.stockist_container {
+  position: fixed;
+  width: 290px;
+  height: 245px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.stockist_items {
+  font-family: 'din-light';
+  font-size: 12px;
+}
+
+.stockist_item_spacing {
+  width: 290px;
+  height: 13px;
+}
+
+.stockist_city {
+  font-family: 'din-light';
+  font-size: 14px;
 }

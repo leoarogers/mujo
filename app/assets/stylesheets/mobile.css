@@ -42,7 +42,7 @@
   .submenu {
     position: fixed;
     font-size: 30px;
-    right: 315px;
+    right: 535px;
     top: 70px;
     z-index: 2;
     display: none;
@@ -78,7 +78,7 @@
     position: absolute;
     width: 300px;
     height: 120px;
-    bottom: 360px;
+    bottom: 430px;
     background: url('logos/TextLogoWB.png') no-repeat center;
     background-size: contain;
   }
@@ -334,5 +334,32 @@
   /*ADJUST CONTACT LINK SPACING*/
   a.contact_link {
     margin-left: -10px;
+  }
+
+  /*STOCKIST PAGE*/
+  .stockist_container {
+    position: fixed;
+    width: 460px;
+    height: 490px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .stockist_items {
+    font-family: 'din-light';
+    font-size: 25px;
+  }
+
+  .stockist_item_spacing {
+    width: 460px;
+    height: 25px;
+  }
+
+  .stockist_city {
+    font-family: 'din-light';
+    font-size: 25px;
   }
 }
