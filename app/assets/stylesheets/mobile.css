@@ -30,12 +30,12 @@
   .menu {
     position: fixed;
     font-size: 35px;
-    right: 20px;
+    right: 10px;
     top: 17px;
     z-index: 2;
   }
   .menu span {
-    padding-left: 10px;
+    padding-left: 0px;
   }
   .fb_mobile {
     display: none;
@@ -118,10 +118,10 @@
     margin: auto;
     font-size: 25px;
   }
-  .contact_form_container {
+  .contact_body_field {
     position: absolute;
     width: 580px;
-    height: 600px;
+    height: 580px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -145,16 +145,13 @@
     box-shadow: none;
     font-size: 30px;
     padding: 4px 9px 4px 9px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .contact_us {
-    position: absolute;
-    font-family: 'din-light';
-    font-size: 25px;
+    position: relative;
   }
   .contact_body_field {
     position: absolute;
-    bottom: -30px;
   }
   .extra {
     position: fixed;
@@ -318,8 +315,8 @@
   /*STOCKIST PAGE*/
   .stockist_container {
     position: fixed;
-    width: 550px;
-    height: 690px;
+    width: 600px;
+    height: 710px;
     left: 0;
     right: 0;
     top: 0;
@@ -332,21 +329,21 @@
   }
   .stockist_item_spacing_bottom {
     width: 460px;
-    height: 25px;
+    height: 35px;
   }
 
   /*CAPS FORMATTING*/
   .caps_9 {
     font-family: 'din-light';
-    font-weight: bold;
     font-size: 25px;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
+    font-weight: normal;
   }
   .caps_12 {
     font-family: 'din-light';
-    font-weight: bold;
     font-size: 40px;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
+    font-weight: normal;
   }
   .no_margin {
     margin: 0;
@@ -357,6 +354,6 @@
     font-family: 'din-light';
     margin-left: 10px;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: normal;
   }
 }

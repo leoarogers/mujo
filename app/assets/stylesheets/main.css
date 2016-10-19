@@ -340,20 +340,22 @@ span {
 }
 
 .contact_notify {
-  color: #A88C25;
   position: absolute;
-  top: 235px;
+  color: #A88C25;
+  height: 10px;
+  width: 100px;
+  top: 255px;
   bottom: 0;
-  left: 60px;
+  left: 0;
   right: 0;
   margin: auto;
   font-size: 12px;
 }
 
-.contact_form_container {
+.contact_body_field {
   position: absolute;
-  width: 257px;
-  height: 225px;
+  width: 270px;
+  height: 275px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -380,7 +382,11 @@ span {
   box-shadow: none;
   font-size: 12px;
   padding: 4px 9px 4px 9px;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+
+.contact_us {
+  position: relative;
 }
 
 .social {
@@ -540,10 +546,6 @@ div.active {
 .press_pic_div:hover .press_title span {
   opacity: 1;
   color: black;
-}
-
-a.contact_link {
-  margin-left: -4px;
 }
 
 .stockist_container {
