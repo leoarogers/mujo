@@ -1,7 +1,7 @@
 <div class="contact-page-wrap">
 
 <div class="contact_form_container">
-	<span class="contact_us">Contact Us</span>
+	<span class="caps_12 no_margin contact_us">CONTACT US</span>
 	<%= form_for(:message, url: contact_index_path, html: {:class => 'contact_body_field'}) do |f| %>
 		<%= f.text_field :contact_name, placeholder: "your name", class: 'contact_form_field' %>
 		<%= f.text_field :contact_email, placeholder: "your email", class: 'contact_form_field' %>
@@ -13,9 +13,9 @@
 </div>
 
 <div class="extra">
-	<span><%= link_to 'Terms & Privacy', policy_index_path, class: "black_a" %></span>
+	<span><%= link_to 'TERMS & PRIVACY', policy_index_path, class: "black_a" %></span>
 	<span>|</span>
-	<span><%= link_to 'Shipping & Returns', shipping_index_path, class: "black_a" %></span>
+	<span><%= link_to 'SHIPPING & RETURNS', shipping_index_path, class: "black_a" %></span>
 </div>
 
 </div>

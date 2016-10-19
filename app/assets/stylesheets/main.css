@@ -271,7 +271,7 @@ a:hover {
   position: absolute;
   width: 109px;
   height: 40px;
-  bottom: 130px;
+  bottom: 115px;
   background: url('logos/TextLogoWB.png') no-repeat center;
   background-size: contain;
 }
@@ -280,17 +280,13 @@ a:hover {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  font-size: 11px;
+  font-size: 9px;
 }
 
 .main_menu ul li {
   text-align: right;
+  padding-top: 1px;
 }
-
-.main_menu ul li a {
-  color: white;
-  font-size: 12px;
-} 
 
 .main_menu ul li a:hover {
   color: #A88C25;
@@ -300,8 +296,9 @@ a:hover {
 .mujo_description {
   position: fixed;
   width: 275px;
-  height: auto;
-  top: 36.5%;
+  height: 220px;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
@@ -314,7 +311,7 @@ a:hover {
   height: 30px;
   background: url('logos/TextBoxLogoBW.png') no-repeat center;
   background-size: contain;
-  top: -37px;
+  top: -40px;
   left: -9px;
   margin-top: auto;
   margin-bottom: auto;
@@ -334,9 +331,12 @@ select {
   outline: none;
 }
 
-span{
-  font-family: "Courier New", Courier, monospace;
+span {
+  letter-spacing: 1px;
+  font-family: 'din-light';
   margin-left: 10px;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .contact_notify {
@@ -353,7 +353,7 @@ span{
 .contact_form_container {
   position: absolute;
   width: 257px;
-  height: 200px;
+  height: 225px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -383,14 +383,6 @@ span{
   margin-top: 5px;
 }
 
-.contact_us {
-  position: absolute;
-  font-family: 'din-light';
-  font-size: 14px;
-  margin: 0px 0px 0px 0px;
-  bottom: 195px;
-}
-
 .social {
   padding-left: 8px;
 }
@@ -401,10 +393,12 @@ ul {
 }
 
 ul li {
-  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+  font-family: 'din-light';
   list-style:none;
   text-align: left;
   padding:0 0 3px 0;
+  font-size: 10px;
 }
 
 li.sublist {
@@ -432,7 +426,7 @@ ul li img {
   right: 0;
   margin: auto;
   text-align: center;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .terms {
@@ -457,7 +451,7 @@ ul li img {
   top: 15px;
   left: 15px;
   color: black;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .back_to_contact:hover {
@@ -524,7 +518,6 @@ div.active {
 
 .press_title span {
   display: block;
-  font-family: 'din-light';
   opacity: 0;
 }
 
@@ -556,7 +549,7 @@ a.contact_link {
 .stockist_container {
   position: fixed;
   width: 290px;
-  height: 245px;
+  height: 345px;
   left: 0;
   right: 0;
   top: 0;
@@ -564,17 +557,30 @@ a.contact_link {
   margin: auto;
 }
 
-.stockist_items {
-  font-family: 'din-light';
-  font-size: 12px;
-}
-
-.stockist_item_spacing {
+.stockist_item_spacing_top {
   width: 290px;
-  height: 13px;
+  height: 10px;
 }
 
-.stockist_city {
+.stockist_item_spacing_bottom {
+  width: 290px;
+  height: 20px;
+}
+
+.caps_9 {
   font-family: 'din-light';
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 9px;
+  letter-spacing: 1px; 
+}
+
+.caps_12 {
+  font-family: 'din-light';
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px; 
+}
+
+.no_margin {
+  margin: 0;
 }
