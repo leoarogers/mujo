@@ -81,7 +81,7 @@ a:hover {
   z-index: -1;
 }
 
-.lookbook-page-wrap, .lookbook2-page-wrap, .lookbook3-page-wrap {
+.lookbook-page-wrap, .lookbook2-page-wrap, .lookbook3-page-wrap, .studio-page-wrap {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -89,7 +89,7 @@ a:hover {
   z-index: -1;
 }
 
-.lookbook_pic, .lookbook2_pic, .lookbook3_pic {
+.lookbook_pic, .lookbook2_pic, .lookbook3_pic, .studio_pic {
   position: fixed;
   width: 700px;
   height: auto;
@@ -147,6 +147,21 @@ a:hover {
   cursor: hand;
 }
 
+.studio_active {
+  position: fixed;
+  width: 750px;
+  height: 490px;
+  background: no-repeat center;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  cursor: hand;
+}
+
 .lb_left_arrow {
   position: absolute;
   width: 15px;
@@ -177,7 +192,7 @@ a:hover {
   cursor: hand;
 }
 
-.lb3_left_arrow {
+.lb3_left_arrow, .studio_left_arrow {
   position: absolute;
   width: 15px;
   height: auto;
@@ -222,7 +237,7 @@ a:hover {
   cursor: hand;  
 }
 
-.lb3_right_arrow {
+.lb3_right_arrow, .studio_right_arrow {
   position: absolute;
   width: 15px;
   height: auto;

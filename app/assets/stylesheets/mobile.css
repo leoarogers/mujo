@@ -176,7 +176,7 @@
     cursor: pointer;
     cursor: hand;
   }
-  .lb_active, .lb2_active, .lb3_active {
+  .lb_active, .lb2_active, .lb3_active, .studio_active {
     position: fixed;
     width: 100%;
     height: auto;
@@ -216,7 +216,7 @@
     margin: auto;
     z-index: 2;
   }
-  .lb3_left_arrow {
+  .lb3_left_arrow, .studio_left_arrow {
     position: fixed;
     width: 30px;
     height: auto;
@@ -255,7 +255,7 @@
     margin: auto;
     z-index: 2;
   }
-  .lb3_right_arrow {
+  .lb3_right_arrow, .studio_right_arrow {
     position: fixed;
     width: 30px;
     height: auto;
