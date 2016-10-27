@@ -34,6 +34,18 @@
     top: 17px;
     z-index: 2;
   }
+  .submenu {
+    font-size: 30px;
+    margin-left: 0;
+  }
+  ul.dropdown-menu {
+    border-color: transparent;
+    background:transparent;
+    box-shadow: none;
+  }
+  .dropdown-menu li {
+    padding-top: 15px;
+  }
   .menu span {
     padding-left: 0px;
   }

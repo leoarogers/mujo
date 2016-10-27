@@ -14,6 +14,8 @@ $(document).ready(function() {
 
 	$('.mujo_description').fadeIn(2500);
 
+	$('.dropdown-toggle').dropdown();
+
 	if (window.location.href == "https://www.mujonyc.com/") {
 		$('.menu').hide();
 	}
