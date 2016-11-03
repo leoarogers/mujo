@@ -381,4 +381,10 @@
     font-size: 30px;
     font-weight: normal;
   }
+  .lows_10 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'din-light';
+    font-weight: normal;
+  }
 }
