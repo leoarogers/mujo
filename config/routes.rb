@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :press
   resources :stockists
   resources :studio_series
+  resources :careers
 end

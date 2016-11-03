@@ -586,6 +586,18 @@ div.active {
   margin: auto;
 }
 
+.careers_container {
+  position: fixed;
+  width: 260px;
+  height: 80px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 12px;
+}
+
 .stockist_item_spacing_top {
   width: 290px;
   height: 10px;
