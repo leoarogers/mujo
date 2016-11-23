@@ -387,4 +387,52 @@
     font-family: 'din-light';
     font-weight: normal;
   }
+
+  /*SALE MODAL*/
+  /*SALE MODAL*/
+  .modal-dialog {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 700px;
+    height: 700px;
+  }
+
+  .modal-content {
+    width: 700px;
+    height: 600px; 
+    background-color: black;
+  }
+
+  .sale-description {
+    color: white;
+    position: fixed;
+    width: 470px;
+    height: 450px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+
+  .shop-now {
+    border: 2px solid white;
+    padding: 15px;
+    background: black;
+    position: relative;
+    left: 25%;
+    margin-top: 20px;
+  }
+
+  #shop-now-btn {
+    text-decoration: none;
+  }
+
+  .close {
+    font-size: 60px;
+  }
 }

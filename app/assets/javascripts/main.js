@@ -21,8 +21,19 @@ $(document).ready(function() {
 	}
 
 	//-------------------------------------
-	//LOOKBOOK 1 SCROLL
+	//SALE MODAL
 	//-------------------------------------
+
+	setTimeout(function(){
+        if(!Cookies.get('modalShown')) {
+        	$("#myModal").modal('show');
+         	Cookies.set('modalShown', true);
+        }
+	},1000);
+
+    //-------------------------------------
+    //LOOKBOOK 1 SCROLL
+    //-------------------------------------
 
 	var lookbook_pic_number = 1;
 
@@ -198,4 +209,4 @@ $(document).ready(function() {
 			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
 		};
 	});
-})
+})	
