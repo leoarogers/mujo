@@ -24,12 +24,12 @@ $(document).ready(function() {
 	//SALE MODAL
 	//-------------------------------------
 
-	setTimeout(function(){
-        if(!Cookies.get('modalShown')) {
-        	$("#myModal").modal('show');
-         	Cookies.set('modalShown', true);
-        }
-	},1000);
+	// setTimeout(function(){
+ //        if(!Cookies.get('modalShown')) {
+ //        	$("#myModal").modal('show');
+ //         	Cookies.set('modalShown', true);
+ //        }
+	// },1000);
 
     //-------------------------------------
     //LOOKBOOK 1 SCROLL
