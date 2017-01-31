@@ -1,27 +1,110 @@
 // determine whether or not mobile device
 var is_mobile = false;
+
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	var is_mobile = true;
 }
+
+var LOOKBOOK = [
+	{
+		'name': 'isan',
+		'length': 5,
+		'number': 1
+	},
+	{
+		'name': 'core',
+		'length': 7,
+		'number': 2
+	},
+	{
+		'name': 'annex',
+		'length': 9,
+		'number': 3
+	},
+	{
+		'name': 'core_supply',
+		'length': 16,
+		'number': 4
+	},
+	{
+		'name': 'studio',
+		'length': 6,
+		'number': 5
+	}
+]
 
 $(document).ready(function() {
 	// check if device is iphone
 	var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
 
+	//-------------------------------------
+	// Page load stylistic logic
+	//-------------------------------------
+
 	$('.title').fadeIn(2500);
-
 	$('.description_container').fadeIn(2500);
-
 	$('.mujo_description').fadeIn(2500);
-
 	$('.dropdown-toggle').dropdown();
+
+
+	//-------------------------------------
+	// Hide top-right nav bar on production
+	//-------------------------------------
 
 	if (window.location.href == "https://www.mujonyc.com/") {
 		$('.menu').hide();
 	}
 
 	//-------------------------------------
-	//SALE MODAL
+	// Lookbook Scroll Logic
+	//-------------------------------------
+
+	LOOKBOOK.forEach((lookbook) => {
+		let lookbook_pic_number = 1;
+
+		$(`.lookbook${lookbook.number}_pic`).click(function(e) {
+			let $target = e.target;
+
+			if ($target.className == `lb${lookbook.number}_right_arrow` || $target.className == `lb${lookbook.number}_left_arrow`) return;
+
+			if (lookbook_pic_number < lookbook.length) {
+				lookbook_pic_number += 1;
+				$(`div.lb${lookbook.number}_active`).removeClass(`lb${lookbook.number}_active`);
+				$(`div.lookbook_` + lookbook_pic_number).addClass(`lb${lookbook.number}_active`);
+			} else {
+				lookbook_pic_number = 1;
+				$(`div.lb${lookbook.number}_active`).removeClass(`lb${lookbook.number}_active`);
+				$(`div.lookbook_` + lookbook_pic_number).addClass(`lb${lookbook.number}_active`);
+			};
+		});
+
+		$(`.lb${lookbook.number}_right_arrow`).click(function(e) {
+			if (lookbook_pic_number < lookbook.length) {
+				lookbook_pic_number += 1;
+				$(`div.lb${lookbook.number}_active`).removeClass(`lb${lookbook.number}_active`);
+				$(`div.lookbook_` + lookbook_pic_number).addClass(`lb${lookbook.number}_active`);
+			} else {
+				lookbook_pic_number = 1;
+				$(`div.lb${lookbook.number}_active`).removeClass(`lb${lookbook.number}_active`);
+				$(`div.lookbook_` + lookbook_pic_number).addClass(`lb${lookbook.number}_active`);
+			};
+		});
+
+		$(`.lb${lookbook.number}_left_arrow`).click(function(e) {
+			if (lookbook_pic_number > 1) {
+				lookbook_pic_number -= 1;
+				$(`div.lb${lookbook.number}_active`).removeClass(`lb${lookbook.number}_active`);
+				$(`div.lookbook_` + lookbook_pic_number).addClass(`lb${lookbook.number}_active`);
+			} else {
+				lookbook_pic_number = lookbook.length;
+				$(`div.lb${lookbook.number}_active`).removeClass(`lb${lookbook.number}_active`);
+				$(`div.lookbook_` + lookbook_pic_number).addClass(`lb${lookbook.number}_active`);
+			};
+		});
+	});
+
+	//-------------------------------------
+	// Sale Modal - uncomment as needed
 	//-------------------------------------
 
 	// setTimeout(function(){
@@ -30,183 +113,4 @@ $(document).ready(function() {
  //         	Cookies.set('modalShown', true);
  //        }
 	// },1000);
-
-    //-------------------------------------
-    //LOOKBOOK 1 SCROLL
-    //-------------------------------------
-
-	var lookbook_pic_number = 1;
-
-	$('.lookbook_pic').click(function(e) {
-		var $target = e.target;
-		console.log($target.className);
-		if ($target.className == 'lb_right_arrow' || $target.className == 'lb_left_arrow') return;
-		if (lookbook_pic_number < 5) {
-			lookbook_pic_number += 1;
-			$('div.lb_active').removeClass('lb_active');
-			$('div.lookbook_' + lookbook_pic_number).addClass('lb_active');
-		} else {
-			lookbook_pic_number = 1;
-			$('div.lb_active').removeClass('lb_active');
-			$('div.lookbook_' + lookbook_pic_number).addClass('lb_active');
-		};
-	});
-
-	$('.lb_right_arrow').click(function(e) {
-		if (lookbook_pic_number < 5) {
-			lookbook_pic_number += 1;
-			$('div.lb_active').removeClass('lb_active');
-			$('div.lookbook_' + lookbook_pic_number).addClass('lb_active');
-		} else {
-			lookbook_pic_number = 1;
-			$('div.lb_active').removeClass('lb_active');
-			$('div.lookbook_' + lookbook_pic_number).addClass('lb_active');
-		};
-	});
-
-	$('.lb_left_arrow').click(function(e) {
-		if (lookbook_pic_number > 1) {
-			lookbook_pic_number -= 1;
-			$('div.lb_active').removeClass('lb_active');
-			$('div.lookbook_' + lookbook_pic_number).addClass('lb_active');
-		} else {
-			lookbook_pic_number = 5;
-			$('div.lb_active').removeClass('lb_active');
-			$('div.lookbook_' + lookbook_pic_number).addClass('lb_active');
-		};
-	});
-
-	//-------------------------------------
-	//LOOKBOOK 2 SCROLL
-	//-------------------------------------
-
-	var lookbook2_pic_number = 1;
-
-	$('.lookbook2_pic').click(function(e) {
-		var $target = e.target;
-		console.log($target.className);
-		if ($target.className == 'lb2_right_arrow' || $target.className == 'lb2_left_arrow') return;
-		if (lookbook2_pic_number < 7) {
-			lookbook2_pic_number += 1;
-			$('div.lb2_active').removeClass('lb2_active');
-			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
-		} else {
-			lookbook2_pic_number = 1;
-			$('div.lb2_active').removeClass('lb2_active');
-			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
-		};
-	});
-
-	$('.lb2_right_arrow').click(function(e) {
-		if (lookbook2_pic_number < 7) {
-			lookbook2_pic_number += 1;
-			$('div.lb2_active').removeClass('lb2_active');
-			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
-		} else {
-			lookbook2_pic_number = 1;
-			$('div.lb2_active').removeClass('lb2_active');
-			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
-		};
-	});
-
-	$('.lb2_left_arrow').click(function(e) {
-		if (lookbook2_pic_number > 1) {
-			lookbook2_pic_number -= 1;
-			$('div.lb2_active').removeClass('lb2_active');
-			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
-		} else {
-			lookbook2_pic_number = 7;
-			$('div.lb2_active').removeClass('lb2_active');
-			$('div.lookbook_' + lookbook2_pic_number).addClass('lb2_active');
-		};
-	});
-
-	//-------------------------------------
-	//LOOKBOOK 3 SCROLL
-	//-------------------------------------
-
-	var lookbook3_pic_number = 1;
-
-	$('.lookbook3_pic').click(function(e) {
-		var $target = e.target;
-		console.log($target.className);
-		if ($target.className == 'lb2_right_arrow' || $target.className == 'lb3_left_arrow') return;
-		if (lookbook3_pic_number < 9) {
-			lookbook3_pic_number += 1;
-			$('div.lb3_active').removeClass('lb3_active');
-			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
-		} else {
-			lookbook3_pic_number = 1;
-			$('div.lb3_active').removeClass('lb3_active');
-			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
-		};
-	});
-
-	$('.lb3_right_arrow').click(function(e) {
-		if (lookbook3_pic_number < 9) {
-			lookbook3_pic_number += 1;
-			$('div.lb3_active').removeClass('lb3_active');
-			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
-		} else {
-			lookbook3_pic_number = 1;
-			$('div.lb3_active').removeClass('lb3_active');
-			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
-		};
-	});
-
-	$('.lb3_left_arrow').click(function(e) {
-		if (lookbook3_pic_number > 1) {
-			lookbook3_pic_number -= 1;
-			$('div.lb3_active').removeClass('lb3_active');
-			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
-		} else {
-			lookbook3_pic_number = 9;
-			$('div.lb3_active').removeClass('lb3_active');
-			$('div.lookbook_' + lookbook3_pic_number).addClass('lb3_active');
-		};
-	});
-
-	//-------------------------------------
-	//STUDIO SERIES SCROLL
-	//-------------------------------------
-
-	var studio_pic_number = 1;
-
-	$('.studio_pic').click(function(e) {
-		var $target = e.target;
-		if ($target.className == 'studio_right_arrow' || $target.className == 'studio_left_arrow') return;
-		if (studio_pic_number < 6) {
-			studio_pic_number += 1;
-			$('div.studio_active').removeClass('studio_active');
-			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
-		} else {
-			studio_pic_number = 1;
-			$('div.studio_active').removeClass('studio_active');
-			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
-		};
-	});
-
-	$('.studio_right_arrow').click(function(e) {
-		if (studio_pic_number < 6) {
-			studio_pic_number += 1;
-			$('div.studio_active').removeClass('studio_active');
-			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
-		} else {
-			studio_pic_number = 1;
-			$('div.studio_active').removeClass('studio_active');
-			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
-		};
-	});
-
-	$('.studio_left_arrow').click(function(e) {
-		if (studio_pic_number > 1) {
-			studio_pic_number -= 1;
-			$('div.studio_active').removeClass('studio_active');
-			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
-		} else {
-			studio_pic_number = 6;
-			$('div.studio_active').removeClass('studio_active');
-			$('div.lookbook_' + studio_pic_number).addClass('studio_active');
-		};
-	});
-})	
+});	
