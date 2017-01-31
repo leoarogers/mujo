@@ -59,49 +59,49 @@ $(document).ready(function() {
 	// Lookbook Scroll Logic
 	//-------------------------------------
 
-	LOOKBOOK.forEach((lookbook) => {
-		var lookbook_pic_number = 1;
+	// LOOKBOOK.forEach((lookbook) => {
+	// 	var lookbook_pic_number = 1;
 
-		$(".lookbook" + lookbook.number + "_pic").click(function(e) {
-			var $target = e.target;
+	// 	$(".lookbook" + lookbook.number + "_pic").click(function(e) {
+	// 		var $target = e.target;
 
-			if ($target.className == "lb" + lookbook.number + "_right_arrow" || $target.className == "lb" + lookbook.number + "_left_arrow") return;
+	// 		if ($target.className == "lb" + lookbook.number + "_right_arrow" || $target.className == "lb" + lookbook.number + "_left_arrow") return;
 
-			if (lookbook_pic_number < lookbook.length) {
-				lookbook_pic_number += 1;
-				$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
-				$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
-			} else {
-				lookbook_pic_number = 1;
-				$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
-				$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
-			};
-		});
+	// 		if (lookbook_pic_number < lookbook.length) {
+	// 			lookbook_pic_number += 1;
+	// 			$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
+	// 			$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
+	// 		} else {
+	// 			lookbook_pic_number = 1;
+	// 			$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
+	// 			$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
+	// 		};
+	// 	});
 
-		$(".lb" + lookbook.number + "_right_arrow").click(function(e) {
-			if (lookbook_pic_number < lookbook.length) {
-				lookbook_pic_number += 1;
-				$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
-				$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
-			} else {
-				lookbook_pic_number = 1;
-				$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
-				$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
-			};
-		});
+	// 	$(".lb" + lookbook.number + "_right_arrow").click(function(e) {
+	// 		if (lookbook_pic_number < lookbook.length) {
+	// 			lookbook_pic_number += 1;
+	// 			$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
+	// 			$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
+	// 		} else {
+	// 			lookbook_pic_number = 1;
+	// 			$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
+	// 			$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
+	// 		};
+	// 	});
 
-		$(".lb" + lookbook.number + "_left_arrow").click(function(e) {
-			if (lookbook_pic_number > 1) {
-				lookbook_pic_number -= 1;
-				$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
-				$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
-			} else {
-				lookbook_pic_number = lookbook.length;
-				$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
-				$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
-			};
-		});
-	})
+	// 	$(".lb" + lookbook.number + "_left_arrow").click(function(e) {
+	// 		if (lookbook_pic_number > 1) {
+	// 			lookbook_pic_number -= 1;
+	// 			$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
+	// 			$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
+	// 		} else {
+	// 			lookbook_pic_number = lookbook.length;
+	// 			$("div.lb" + lookbook.number + "_active").removeClass("lb" + lookbook.number + "_active");
+	// 			$("div.lookbook_" + lookbook_pic_number).addClass("lb" + lookbook.number + "_active");
+	// 		};
+	// 	});
+	// })
 
 	//-------------------------------------
 	// Sale Modal - uncomment as needed
