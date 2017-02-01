@@ -17,6 +17,26 @@
     background-size: cover;
     z-index: -1;
   }
+  .main_menu_container {
+    width: 350px;
+    height: 620px;
+    line-height: 530px;
+  }
+  .main_menu_content {
+    width: 350px;
+    line-height: 75px;
+  }
+  .main_menu_container ul li {
+    padding-top: 1px;
+    font-size: 55px;
+  }
+  .main_menu_title {
+    width: 350px;
+    height: 150px;
+    background: url('logos/MUJO_Logo_White.png') no-repeat center;
+    background-size: contain;
+    margin-bottom: -12px;
+  }
 
   /*HIDE DESKTOP IMAGES*/
   .dk {
@@ -60,65 +80,28 @@
     margin-left: 20px;
   }
 
-  .title {
-    position: fixed;
-    width: 300px;
-    height: 415px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-
-  .main_menu_box {
-    position: absolute;
-    width: 300px;
-    height: 120px;
-    bottom: 490px;
-    left: -5px;
-    background: url('logos/MUJO_Logo_White.png') no-repeat center;
-    background-size: contain;
-  }
-
-  .main_menu {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    font-size: 11px;
-  }
-
-  .main_menu ul li {
-    text-align: right;
-  }
-
-  .main_menu ul li a {
-    color: white;
-    font-size: 45px;
-  }
-
   /*ABOUT PAGE*/
-  .mujo_description {
-    color: black;
+  .mujo_description_container {
     position: fixed;
     width: 550px;
-    height: auto;
-    top: 30%;
+    height: 800px;
+    line-height: 780px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    font-size: 30px;
+  }
+  .mujo_description_content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 45px;
   }
   .mujo_description_title {
-    position: absolute;
+    height: 60px;
     width: 120px;
-    height: 50px;
     background: url('logos/MUJO_Logo_Black.png') no-repeat center;
     background-size: contain;
-    top: -70px;
-    left: 1px;
-    margin-top: auto;
-    margin-bottom: auto;
   }
 
   /*CONTACT FORM*/

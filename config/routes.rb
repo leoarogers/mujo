@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :shipping
   resources :admin
   resources :press
-  resources :stockists
   resources :studio_series
   resources :careers
 end

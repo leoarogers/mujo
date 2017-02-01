@@ -41,9 +41,9 @@ $(document).ready(function() {
 	// Page load stylistic logic
 	//-------------------------------------
 
-	$('.title').fadeIn(2500);
+	$('.main_menu_container').fadeIn(2500);
 	$('.description_container').fadeIn(2500);
-	$('.mujo_description').fadeIn(2500);
+	$('.mujo_description_container').fadeIn(2500);
 	$('.dropdown-toggle').dropdown();
 
 
