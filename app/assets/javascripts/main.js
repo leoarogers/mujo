@@ -51,8 +51,9 @@ $(document).ready(function() {
 	// Hide top-right nav bar on production
 	//-------------------------------------
 
-	if (window.location.href == "https://www.mujonyc.com/") {
+	if (window.location.href == "https://www.mujonyc.com/" || window.location.href == "http://localhost:3000/") {
 		$('.menu').hide();
+		$('.ig_icon').addClass("ig_icon_hide");
 	}
 
 	//-------------------------------------
