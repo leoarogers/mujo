@@ -6,9 +6,10 @@
 	<%= f.text_field :contact_email, placeholder: "your email", class: 'contact_form_field lows_10' %>
 	<%= f.text_area :message_content, placeholder: "message", class: 'contact_form_field lows_10', size: "40x7" %>
 	<%= f.submit "send", class: 'contact_form_btn lows_10' %>
+
+	<span class="contact_notify lows_10"><%= session[:message] %></span>
+	<% session.delete(:message) %>
 <% end %>
-<div class="contact_notify"><%= session[:message] %></div>
-<% session.delete(:message) %>
 
 <div class="extra">
 	<span><%= link_to 'CAREERS', careers_path, class: "black_a caps_9" %></span>

@@ -380,16 +380,7 @@ span {
 }
 
 .contact_notify {
-  position: absolute;
-  color: #A88C25;
-  height: 10px;
-  width: 100px;
-  top: 255px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  font-size: 12px;
+  margin-left: 20px;
 }
 
 .contact_body_field {
