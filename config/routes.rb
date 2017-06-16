@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :press
   resources :studio_series
   resources :careers
+  resources :care
 end

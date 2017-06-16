@@ -541,6 +541,18 @@ div.active {
   margin-bottom: 80px;
 }
 
+.care_pic_div {
+  position: fixed;
+  width: 588px;
+  height: 400px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: auto;
+}
+
 .press_title {
   position: absolute;
   bottom: 300px;
@@ -548,6 +560,23 @@ div.active {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.care_title {
+  position: fixed;
+  height: 20px;
+  width: 500px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+
+.care_title span {
+  display: block;
+  opacity: 0;
 }
 
 .press_title span {
@@ -572,6 +601,30 @@ div.active {
 }
 
 .press_pic_div:hover .press_title span {
+  opacity: 1;
+  color: black;
+}
+
+.care_pic {
+   position: fixed;
+   width: 588px;
+   height: 400px;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   padding: auto;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.care_pic_div:hover .care_pic {
+  opacity: 0.05;
+}
+
+.care_pic_div:hover .care_title span {
   opacity: 1;
   color: black;
 }

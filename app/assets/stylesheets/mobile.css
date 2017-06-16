@@ -313,6 +313,20 @@
     font-size: 35px;
   }
 
+  /*CARE PAGE*/
+  .care_pic_div {
+    width: 700px;
+    height: 500px;
+  }
+
+  .care_pic {
+    width: 700px;
+    height: 500px;
+  }
+  .care_title {
+    font-size: 35px;
+  }
+
   /*ADJUST CONTACT LINK SPACING*/
   a.contact_link {
     margin-left: -10px;
