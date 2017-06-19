@@ -315,16 +315,8 @@
 
   /*CARE PAGE*/
   .care_pic_div {
-    width: 700px;
-    height: 500px;
-  }
-
-  .care_pic {
-    width: 700px;
-    height: 500px;
-  }
-  .care_title {
-    font-size: 35px;
+    width: 100%;
+    height: 550px;
   }
 
   /*ADJUST CONTACT LINK SPACING*/
